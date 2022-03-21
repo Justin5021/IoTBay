@@ -9,9 +9,34 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Login Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Login</h1>
+        <table>
+            <form action="index.jsp">
+                <tr>
+                    <td>
+                        <label for="email">Email:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="email" name="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="name">Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="name" name="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Login">
+                    </td>
+                </tr>
+            </form>
+        </table>
     </body>
 </html>
