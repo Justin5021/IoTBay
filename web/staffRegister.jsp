@@ -1,7 +1,7 @@
 <%-- 
     Document   : staffRegister
     Created on : Mar 16, 2022, 12:59:19 PM
-    Author     : User
+    Author     : Jefrich Pekantan 13822832
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
