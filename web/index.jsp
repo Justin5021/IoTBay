@@ -1,14 +1,14 @@
 <%-- 
     Document   : index
     Created on : Mar 20, 2022, 2:38:33 AM
-    Author     : Justin Chin
+    Author     : Justin Chin, 13595766
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="index.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

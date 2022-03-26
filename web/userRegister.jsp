@@ -1,70 +1,94 @@
 <%-- 
     Document   : userRegister
     Created on : Mar 16, 2022, 12:58:30 PM
-    Author     : User
+    Author     : Justin Chin, 13595766
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="index.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Register </title>
     </head>
     <body>
-        <div class="register-container">
+        <div class="container">
             <form class="register-form" action="RegisterServlet" method="POST">
-              <h1 class="register-title">Create Account</h1>
-              
-              <label for="fname">First Name</label>
-              <input type="text" placeholder="Enter first name" name="fname" required>
-              
-              <label for="lname">Last Name</label>
-              <input type="text" placeholder="Enter last name" name="lname" required>
-              
-              <label for="email">Email</label>
-              <input type="text" placeholder="Enter email address" name="email" required>
-          
-              <label for="phonenum">Phone Number</label>
-              <input type="text" placeholder="Enter Phone Number" name="phonenum" required>
-
-              <label for="street-number">Street Number</label>
-              <input type="text" placeholder="Enter Street Number" name="street-number" required>
-
-              <label for="street-name">Street Name</label>
-              <input type="text" placeholder="Enter Street Name" required>
-
-              <label for="street-type">Street Type</label>
-              <input type="text" placeholder="Enter Street Type" name="street-type" required>
-
-              <label for="suburb">Suburb</label>
-              <input type="text" placeholder="Enter Suburb" name="suburb" required>
-
-              <label for="state">State</label>
-              <input type="text" placeholder="Enter State" name="state" required>
-
-              <label for="postcode">Postcode</label>
-              <input type="text" name="postcode" required>
-
-              <label for="Country">Country</label>
-              <input type="text" placeholder="Enter Country" name="country" required>
-              
-              <label for="psw">Password</label>
-              <input type="password" placeholder="Enter your password" name="pass" required>
-
-              <label for="psw">Confirm Password</label>
-              <input type="password" placeholder="Confirm Password" name="psw1" required>
-              <p class="already-have-account"> Confirm Password </p>
                 
-              <p>By creating an account you agree to our <a href="#"> Terms & Conditions</a></p>
-              <button type="submit" class="create-btn">Create Account</button>
-              
-              <div class="already-have-account">
-                  <p> Already have an account? <a href="login.jsp"> Login here! </a> </p>
-              </div>
+                <div class='register-container'>
+                    <div class='register-item'>
+                        <h1 class="register-title"> Sign Up Here! </h1>
+                    </div>
+                    <div class='register-item'>
+                        <table class="register-table">
+                            <tbody>
+                                <tr>
+                                    <td> <label for="fname">First Name</label> </td>
+                                    <td> <input class='register-field' type="text" placeholder="Enter First Name" name="fname" required> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="lname">Last Name</label> </td>
+                                    <td> <input class='register-field' type="text" placeholder="Enter Last Name" name="lname" required> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="email">Email</label> </td>
+                                    <td> <input class='register-field' type="text" placeholder="Enter Email Address" name="email" required> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="phonenum">Phone Number</label> </td>
+                                    <td> <input class='register-field' type="text" placeholder="Enter Phone Number" name="phonenum" required> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="street-number">Street Number</label> </td>
+                                    <td> <input class='register-field' type="text" placeholder="Enter Street Number" name="street-number" required> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="street-name">Street Name</label> </td>
+                                    <td> <input class='register-field' type="text" placeholder="Enter Street Name" required> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="street-type">Street Type</label> </td>
+                                    <td> <input class='register-field' type="text" placeholder="Enter Street Type" name="street-type" required> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="suburb">Suburb</label> </td>
+                                    <td> <input class='register-field' type="text" placeholder="Enter Suburb" name="suburb" required> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="state">State</label> </td>
+                                    <td> <input class='register-field' type="text" placeholder="Enter State" name="state" required> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="postcode">Postcode</label> </td>
+                                    <td> <input class='register-field' type="text" placeholder="Enter Postcode" name="postcode" required> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="Country">Country</label></td>
+                                    <td> <input class='register-field' type="text" placeholder="Enter Country" name="country" required></td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="psw">Password</label> </td>
+                                    <td> <input class='register-field' type="password" placeholder="Enter Your Password" name="pass" required> </td>
+                                </tr>
+                                <tr>
+                                    <td> <label for="psw">Confirm Password</label> </td>
+                                    <td> <input class='register-field' type="password" placeholder="Confirm Password" name="psw1" required> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class='register-item'>
+                        <p class='register-txt'> Do you agree to the <a href="#"> Terms & Conditions?</a></p>
+                        <button type="submit" class="create-btn">Create Account</button>
+                    </div>
+                    
+                    <div class='register-item'>
+                        <p class='register-txt'> Already have an account? <a href="login.jsp"> Login here! </a> </p>
+                    </div>
+                </div>
             </form>
         </div>
     </body>
