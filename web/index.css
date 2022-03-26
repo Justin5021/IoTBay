@@ -121,3 +121,25 @@ a.active, a:hover {
         left: 0;
     }
 }
+
+/*
+ * Register Page
+ */
+
+.register-container {
+    width: 30%;
+    height: 50%;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 4em;
+}
+
+.register-form {
+    
+}
+
+.register-title {
+    text-align: center;
+}

@@ -25,7 +25,7 @@
                 <li><a class="active" href="#"> Home </a></li>
                 <li><a href="#"> About </a></li>
                 <li><a href="#"> Contact </a></li>
-                <li><a href="#"> Login </a></li>
+                <li><a href="userRegister.jsp"> Register </a></li>
             </ul>
         </nav>
         <div class="index-container">
