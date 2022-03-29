@@ -179,3 +179,70 @@ a.active, a:hover {
     border: border-box;
     border-radius: 0.2rem;
 }
+
+/* Welcome Page Styling */
+.welcome-head {
+    text-align: center;
+    font-size: 3.75rem;
+    padding: 2rem 2rem;
+    margin: 2rem 2rem;
+}
+
+.main-btn-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.shop-btn, .view-btn, welcome-goto-btn {
+    background-color: #172D8F;
+    border: none;
+    color: white;
+    padding: 1rem 1rem;
+    text-align: center;
+    font-size: 35px;
+    border-radius: 0.275rem;
+    width: 25%;
+}
+
+/* Main Page Styling */
+.main-table-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    padding: 0.5rem 1rem;
+    margin: 2rem 2rem;
+    text-align: center;
+}
+
+.main-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.main-th,
+.main-td {
+    border: 1px solid #d0d0d0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.main-th {
+    background-color: #364765;
+    color: #fff;
+    padding: 1.25rem;
+    font-weight: lighter;
+}
+
+.main-td {
+    background-color: #f4f5f8;
+    color: #364765;
+    padding: 1rem;
+}
+
+.main-table-title {
+    font-size: 3rem;
+    padding: 1rem 1rem;
+}

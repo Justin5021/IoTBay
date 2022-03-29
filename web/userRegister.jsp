@@ -16,7 +16,7 @@
     </head>
     <body>
         <div class="container">
-            <form class="register-form" action="RegisterServlet" method="POST">
+            <form class="register-form" action="welcome.jsp" method="POST">
                 
                 <div class='register-container'>
                     <div class='register-item'>
@@ -47,7 +47,7 @@
                                 </tr>
                                 <tr>
                                     <td> <label for="street-name">Street Name</label> </td>
-                                    <td> <input class='register-field' type="text" placeholder="Enter Street Name" required> </td>
+                                    <td> <input class='register-field' type="text" placeholder="Enter Street Name" name="street-name" required> </td>
                                 </tr>
                                 <tr>
                                     <td> <label for="street-type">Street Type</label> </td>

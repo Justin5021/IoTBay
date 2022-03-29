@@ -15,8 +15,11 @@
         <h1 style="font-size:300%; text-align:center;">Logout</h1>
         <br>
         <p style="font-size:200%; text-align:center;">You have been successfully logged out.</p>
-           <br>
-         
-         <button>Click here to continue....</button>
+        <br>
+        
+        <a href="index.jsp">
+            <button>Click here to continue....</button>
+        </a>
+        <% session.invalidate(); %>
     </body>
 </html>
