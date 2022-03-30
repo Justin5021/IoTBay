@@ -48,6 +48,8 @@
         %>
         
         <h1 class="welcome-head"> Welcome <%= firstName + " " + lastName %>! </h1>
+        <p class="welcome-txt">Your email is <%=email%></p>
+        <p class="welcome-txt">Your phone number is <%=phoneNumber%></p>
         <br />
         
         <a href="main.jsp">
