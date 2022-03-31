@@ -1,10 +1,10 @@
 <%-- 
-    Document   : welcome
-    Created on : Mar 29, 2022, 10:44:35 PM
+    Document   : staffWelcome
+    Created on : Apr 1, 2022, 5:00:06 AM
     Author     : Justin
 --%>
 
-<%@page import="uts.isd.model.User"%>
+<%@page import="uts.isd.model.Staff"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -31,18 +31,12 @@
         </nav>
         
         <% 
-//            int userID = 1;
+//            int staffID = 1;
             String firstName = request.getParameter("fname");
             String lastName = request.getParameter("lname");
             String email = request.getParameter("email");
             String password = request.getParameter("pass");
             String phoneNumber = request.getParameter("phonenum");
-            String streetNumber = request.getParameter("street-number");
-            String streetName = request.getParameter("street-name");
-            String streetType = request.getParameter("street-type");
-            String suburb = request.getParameter("suburb");
-            String state = request.getParameter("state");
-            String postcode = request.getParameter("postcode");
             String country = request.getParameter("country");
         %>
         
@@ -51,16 +45,15 @@
         <p class="welcome-txt">Your phone number is <%=phoneNumber%></p>
         <br />
         <p class="welcome-txt"> Please click on this button below to confirm your details! </p>
-        <form class="welcome-container" action="main.jsp" method="POST">
+        <form class="welcome-container" action="staffMain.jsp" method="POST">
             <button type="submit" class="welcome-goto-btn"> 
                 <i class="fa fa-home" aria-hidden="true"></i>
                 Main 
             </button> 
         </form>
         <%
-//            User user = new User(userID,fname,lname,email,password,phoneNumber,streetNumber, streetName,streetType,suburb,state,postcode,country);
-            User user = new User(firstName,lastName,email,password,phoneNumber,streetNumber,streetName,streetType,suburb,state,postcode,country);
-            session.setAttribute("user",user);
+            Staff staff = new Staff(firstName,lastName,email,password,phoneNumber,country);
+            session.setAttribute("staff",staff);
         %>
     </body>
 </html>

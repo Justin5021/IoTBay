@@ -1,10 +1,10 @@
 <%-- 
-    Document   : main
-    Created on : Mar 30, 2022, 2:46:39 AM
+    Document   : staffMain
+    Created on : Apr 1, 2022, 5:10:05 AM
     Author     : Justin
 --%>
 
-<%@page import="uts.isd.model.User"%>
+<%@page import="uts.isd.model.Staff"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -30,11 +30,11 @@
             </ul>
         </nav>
         <%
-            User user = (User) session.getAttribute("user");
+            Staff staff = (Staff) session.getAttribute("staff");
         %>
         
         <div class="main-table-container">
-            <h1 class="main-table-title"> Details Review </h1>
+            <h1 class="main-table-title"> Staff Details Review </h1>
             <table class="main-table">
                 <thead>
                     <tr>
@@ -43,29 +43,17 @@
                         <th class="main-th">Email</th>
                         <th class="main-th">Password</th>
                         <th class="main-th">Phone Number</th>
-                        <th class="main-th">Street Number</th>
-                        <th class="main-th">Street Name</th>
-                        <th class="main-th">Street Type</th>
-                        <th class="main-th">Suburb</th>
-                        <th class="main-th">State</th>
-                        <th class="main-th">Postcode</th>
                         <th class="main-th">Country</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="main-td">${user.firstName}</td>
-                        <td class="main-td">${user.lastName}</td>
-                        <td class="main-td">${user.email}</td>
-                        <td class="main-td">${user.password}</td>
-                        <td class="main-td">${user.phoneNumber}</td>
-                        <td class="main-td">${user.streetNumber}</td>
-                        <td class="main-td">${user.streetName}</td>
-                        <td class="main-td">${user.streetType}</td>
-                        <td class="main-td">${user.suburb}</td>
-                        <td class="main-td">${user.state}</td>
-                        <td class="main-td">${user.postcode}</td>
-                        <td class="main-td">${user.country}</td>
+                        <td class="main-td">${staff.firstName}</td>
+                        <td class="main-td">${staff.lastName}</td>
+                        <td class="main-td">${staff.email}</td>
+                        <td class="main-td">${staff.password}</td>
+                        <td class="main-td">${staff.phoneNumber}</td>
+                        <td class="main-td">${staff.country}</td>
                     </tr>
                 </tbody>
             </table>
@@ -75,7 +63,7 @@
             <div class="btn-container-item">
                 <a href="#">
                     <button class="shop-btn">
-                        <i class="fas fa-shopping-cart"></i> Shop
+                        <i class="fas fa-shopping-cart"></i> View Catalogue
                     </button>
                 </a>
             </div>

@@ -1,7 +1,7 @@
 <%-- 
     Document   : userRegister
     Created on : Mar 16, 2022, 12:58:30 PM
-    Author     : Justin Chin, 13595766
+    Author     : Justin
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -15,6 +15,19 @@
         <title> Register </title>
     </head>
     <body>
+        <nav>
+            <input type="checkbox" id="dropdown-bar">
+            <label for="dropdown-bar" class="dropdown-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo"> IoTBay </label>
+            <ul>
+                <li><a href="index.jsp"> Home </a></li>
+                <li><a href="#"> About </a></li>
+                <li><a href="#"> Contact </a></li>
+                <li><a href="terms.jsp"> Terms </a></li>
+            </ul>
+        </nav>
         <div class="container">
             <form class="register-form" action="welcome.jsp" method="POST">
                 
@@ -81,7 +94,7 @@
                         </table>
                     </div>
                     <div class='register-item'>
-                        <p class='register-txt'> Do you agree to the <a href="#"> Terms & Conditions?</a></p>
+                        <p class='register-txt'> Do you agree to the <a href="terms.jsp"> Terms & Conditions?</a></p>
                         <button type="submit" class="create-btn">Create Account</button>
                     </div>
                     

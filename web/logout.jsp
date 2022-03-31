@@ -24,7 +24,7 @@
                 <p style="font-size:150%; text-align:left;">
                     You have been successfully logged out.
                     <br></br>
-                    Return to the home page <a href="index.jsp"> here </a>.
+                    Return to the home page <a href="index.jsp"> here.</a>
                 </p>
         </div>
         

@@ -1,5 +1,5 @@
 /*
- * User is a JavaBean which stores 
+ * User is a JavaBean which stores the User Model Data
  */
 package uts.isd.model;
 
@@ -10,7 +10,8 @@ import java.io.Serializable;
  */
 public class User implements Serializable {
 //    private int userID;
-    private String firstName,lastName, email, phoneNumber, password, streetName, streetType, suburb, state, country, streetNumber, postcode;
+    private String firstName, lastName, email, phoneNumber, password, 
+                   streetName, streetType, suburb, state, country, streetNumber, postcode;
 
     public User(
 //            int userID, 

@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : Mar 20, 2022, 2:38:33 AM
-    Author     : Justin Chin, 13595766
+    Author     : Justin
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -29,8 +29,24 @@
             </ul>
         </nav>
         <div class="index-container">
-            <h1> Welcome to IoTBay </h1>
-            <p class="index-text"> Please select an action </p>
+            <h1 class="index-head"> Welcome to IoTBay </h1>
+            <p class="index-text"> Please select appropriate choice </p>
+            <div class="btn-container">
+                <div class="btn-container-item">
+                    <a href="staffRegister.jsp">
+                        <button class="staff-register-btn">
+                            <i class="fas fa-briefcase"></i> Staff
+                        </button>
+                    </a> 
+                </div>
+                <div class="btn-container-item">
+                    <a href="userRegister.jsp">
+                        <button class="user-register-btn">
+                            <i class="fas fa-cart-plus"></i> Customer
+                        </button>
+                    <a/>
+                </div>
+            </div>
         </div> 
     </body>
 </html>
