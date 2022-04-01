@@ -70,7 +70,7 @@
                                 
                                 <tr>
                                     <td> <label for="psw">Confirm Password</label> </td>
-                                    <td> <input class='register-field' type="password" placeholder="Confirm Password" name="psw1" required> </td>
+                                    <td> <input class='register-field' type="password" placeholder="Confirm Password" name="cpass" required> </td>
                                 </tr>
                             </tbody>
                         </table>

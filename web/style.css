@@ -186,6 +186,18 @@ nav ul li a.active, nav ul li a:hover {
     border-radius: 0.2rem;
 }
 
+.update-btn {
+    color: black;
+    background-color: #ffcf33;
+    margin: 1rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 15rem;
+    height: 2rem;
+    border: border-box;
+    border-radius: 0.2rem;
+}
+
 /* Welcome Page Styling */
 .welcome-head {
     text-align: center;
@@ -294,4 +306,41 @@ nav ul li a.active, nav ul li a:hover {
 .main-table-title {
     font-size: 3rem;
     padding: 1rem 1rem;
+}
+
+/* Edit Page Styling */
+.edit-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.edit-item {
+    padding: 1rem 1rem;
+}
+
+.edit-title {
+    text-align: center;
+}
+
+.edit-form {
+    position: relative;
+    width: 50%;
+    margin: 3.25rem auto;
+    overflow: hidden;
+    border-radius: 0.375rem;
+}
+
+.edit-table {
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.edit-field {
+    width: 18.75rem;
+    height: 1.875rem;
+    border: border-box;
+    border-radius: 0.2rem;
+    text-align: center;
 }

@@ -80,9 +80,9 @@
                 </a>
             </div>
             <div class="btn-container-item">
-                <a href="#">
+                <a href="userEdit.jsp">
                     <button class="view-btn">
-                        <i class="fas fa-user-circle"></i> View Account
+                        <i class="fas fa-user-circle"></i> Edit Account
                     </button>
                 <a/>
             </div>
