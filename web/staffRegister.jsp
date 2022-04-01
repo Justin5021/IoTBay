@@ -50,7 +50,7 @@
                                 
                                 <tr>
                                     <td> <label for="email">Email</label> </td>
-                                    <td> <input class='register-field' type="text" placeholder="Enter Email Address" name="email" required> </td>
+                                    <td> <input class='register-field' type="email" placeholder="Enter Email Address" name="email" required> </td>
                                 </tr>
                                 
                                 <tr>
