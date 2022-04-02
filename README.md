@@ -2,8 +2,11 @@
 ** 41025 ISD Assignment 1 Analysis, Planning, Architecture & Design
 
 ### Requirements
-- NetBeans IDE
+- Download NetBeans IDE Version 12.6
 - Glassfish Server 4.1
+
+## JDK Environment
+Ensure that JDK **8** is installed onto your machine 
 
 ### Deployment Steps
 1. Clone the repository or download the code
