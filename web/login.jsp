@@ -19,7 +19,7 @@
                 <li><a href="index.jsp"> Home </a></li>
                 <li><a href="#"> About </a></li>
                 <li><a href="#"> Contact </a></li>
-                <li><a href="logout.jsp"> Logout </a></li>
+                <li><a href="terms.jsp"> Terms </a></li>
             </ul>
         </nav>
         <div class="container">
