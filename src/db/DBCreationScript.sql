@@ -60,6 +60,13 @@ CREATE TABLE Orders (
     FOREIGN KEY (PaymentID) REFERENCES Payment(PaymentID)
 );
 
+CREATE TABLE Supplier (
+    SupplierID INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+    SupplierAddress VARCHAR(50), 
+    SupplierPhone INT, 
+    PRIMARY KEY (SupplierID)
+);
+
 CREATE TABLE Product (
     ProductID INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
     ProductSerialNum INT, 
@@ -68,8 +75,10 @@ CREATE TABLE Product (
     ProductBrand VARCHAR(50), 
     ProductPrice DECIMAL(15,2),
     ProductQuantity INT, 
-    ProductImage VARCHAR(250), 
-    PRIMARY KEY (ProductID)
+    ProductImage VARCHAR(250),
+    SupplierID INT,
+    PRIMARY KEY (ProductID),
+    FOREIGN KEY (SupplierID) REFERENCES Supplier(SupplierID)
 );
 
 CREATE TABLE CART(
@@ -95,13 +104,6 @@ CREATE TABLE OrderLine (
     PRIMARY KEY (ProductID, OrderID),
     FOREIGN KEY (ProductID) REFERENCES PRODUCT(PRODUCTID),
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
-);
-
-CREATE TABLE Supplier (
-    SupplierID INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
-    SupplierAddress VARCHAR(50), 
-    SupplierPhone INT, 
-    PRIMARY KEY (SupplierID)
 );
 
 CREATE TABLE Invoice (
