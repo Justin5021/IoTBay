@@ -9,7 +9,7 @@ CREATE TABLE Users (
     LastName VARCHAR(50) NOT NULL, 
     Email VARCHAR(50) NOT NULL, 
     Pass VARCHAR(20) NOT NULL,
-    PhoneNumber INT NOT NULL, 
+    PhoneNumber VARCHAR(10) NOT NULL, 
     StreetNumber INT NOT NULL, 
     StreetName VARCHAR(50) NOT NULL, 
     StreetType VARCHAR(12) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE Staff (
     StaffLastName VARCHAR(50) NOT NULL,
     StaffEmail VARCHAR(50) NOT NULL, 
     StaffPass VARCHAR(20) NOT NULL,
-    StaffPhone INT NOT NULL,
+    StaffPhone VARCHAR(10) NOT NULL,
     StaffCountry VARCHAR(50) NOT NULL,  
     PRIMARY KEY (StaffID)
 );
@@ -62,8 +62,8 @@ CREATE TABLE Orders (
 
 CREATE TABLE Supplier (
     SupplierID INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
-    SupplierAddress VARCHAR(50), 
-    SupplierPhone INT, 
+    SupplierAddress VARCHAR(50) NOT NULL, 
+    SupplierPhone VARCHAR(10) NOT NULL, 
     PRIMARY KEY (SupplierID)
 );
 
