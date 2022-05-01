@@ -10,12 +10,12 @@ CREATE TABLE Users (
     Email VARCHAR(50) NOT NULL, 
     Pass VARCHAR(20) NOT NULL,
     PhoneNumber VARCHAR(10) NOT NULL, 
-    StreetNumber INT NOT NULL, 
+    StreetNumber VARCHAR(5) NOT NULL, 
     StreetName VARCHAR(50) NOT NULL, 
     StreetType VARCHAR(12) NOT NULL,
     Suburb VARCHAR(50) NOT NULL, 
     "State" VARCHAR(15) NOT NULL, 
-    Postcode INT NOT NULL, 
+    Postcode VARCHAR(4) NOT NULL, 
     Country VARCHAR(50) NOT NULL, 
     PRIMARY KEY (UserID)
 );

@@ -9,18 +9,18 @@ import java.io.Serializable;
  * @author Justin Chin, 13595766
  */
 public class Staff implements Serializable {
-    //    private int staffID;
+        private int staffID;
     private String firstName, lastName, email, phoneNumber, country, password;
 
     public Staff(
-//            int staffID, 
+            int staffID, 
             String firstName, 
             String lastName, 
             String email, 
             String password, 
             String phoneNumber,  
             String country) {
-//        this.staffID = staffID;
+        this.staffID = staffID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -29,13 +29,13 @@ public class Staff implements Serializable {
         this.country = country;
     }
 
-//    public int getUserID() {
-//        return userID;
-//    }
-//    
-//    public void setUserID(int userID) {
-//        this.userID = userID;
-//    }
+    public int getStaffID() {
+        return staffID;
+    }
+    
+    public void setUserID(int staffID) {
+        this.staffID = staffID;
+    }
     
     public String getFirstName() {
         return firstName;

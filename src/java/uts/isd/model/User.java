@@ -9,12 +9,12 @@ import java.io.Serializable;
  * @author Justin Chin, 13595766
  */
 public class User implements Serializable {
-//    private int userID;
+    private int userID;
     private String firstName, lastName, email, phoneNumber, password, 
                    streetName, streetType, suburb, state, country, streetNumber, postcode;
 
     public User(
-//            int userID, 
+            int userID, 
             String firstName, 
             String lastName, 
             String email, 
@@ -27,7 +27,7 @@ public class User implements Serializable {
             String state, 
             String postcode, 
             String country) {
-//        this.userID = userID;
+        this.userID = userID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -42,13 +42,13 @@ public class User implements Serializable {
         this.country = country;
     }
 
-//    public int getUserID() {
-//        return userID;
-//    }
-//    
-//    public void setUserID(int userID) {
-//        this.userID = userID;
-//    }
+    public int getUserID() {
+        return userID;
+    }
+    
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
     
     public String getFirstName() {
         return firstName;
