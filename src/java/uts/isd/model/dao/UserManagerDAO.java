@@ -24,11 +24,35 @@ public class UserManagerDAO {
         String fetch = "SELECT * FROM IOTBAY.Users WHERE Email= '" + email + "' and Pass='" + password + "' ";
         ResultSet rs = st.executeQuery(fetch);
         while (rs.next()) {
-            String userEmail = rs.getString(2); 
-            String userPass = rs.getString(3);
+            String userEmail = rs.getString(4); 
+            String userPass = rs.getString(5);
             if ( userEmail.equals(email) && userPass.equals(password) ) {
+                int userID  = rs.getInt(1);
+                String userFirstName  = rs.getString(2);
+                String userLastName  = rs.getString(3);
+                String userPhone  = rs.getString(6);
+                String userStreetNum  = rs.getString(7);
+                String userStreetName  = rs.getString(8);
+                String userStreetType  = rs.getString(9);
+                String userSuburb  = rs.getString(10);
+                String userState  = rs.getString(11);
+                String userPostcode  = rs.getString(12);
+                String userCountry  = rs.getString(13);
+                // Get the info from query, create a new data object                
                 return new User(
-                        
+                    userID, 
+                    userFirstName, 
+                    userLastName, 
+                    userEmail, 
+                    userPass, 
+                    userPhone, 
+                    userStreetNum,
+                    userStreetName,    
+                    userStreetType,    
+                    userSuburb,    
+                    userState,    
+                    userPostcode,    
+                    userCountry    
                 );
             }
         }
