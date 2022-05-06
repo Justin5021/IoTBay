@@ -41,23 +41,23 @@
                 </div>
             </div>
         </nav>
-        <div class="index-container">
-            <h1 class="index-head"> Welcome to IoTBay </h1>
-            <p class="index-text"> Please select appropriate choice </p>
+        <div class="index-container text-center"  style="margin-top: 1cm">
+            <h1 class="index-head" style="margin-top: 0.5cm ; margin-bottom: 1cm"><strong>Welcome to IoTBay</strong></h1>
+            <h3 class="index-text"> Please select your identity below</h3>
             <div class="btn-container">
-                <div class="btn-container-item">
-                    <a href="staffRegister.jsp">
-                        <button class="staff-register-btn">
-                            <i class="fas fa-briefcase"></i> Staff
-                        </button>
-                    </a> 
-                </div>
-                <div class="btn-container-item">
+                <div href="staffRegister.jsp" style="margin-bottom: 0.5cm; margin-top: 1cm">
                     <a href="userRegister.jsp">
-                        <button class="user-register-btn">
+                        <button class="btn btn-outline-secondary btn-lg">
                             <i class="fas fa-cart-plus"></i> Customer
                         </button>
                     <a/>
+                </div>
+                <div class="btn-container-item">
+                    <a href="staffRegister.jsp">
+                        <button class="btn btn-outline-secondary btn-lg">
+                            <i class="fas fa-briefcase"></i> Staff
+                        </button>
+                    </a> 
                 </div>
             </div>
         </div>
