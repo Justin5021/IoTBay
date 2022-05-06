@@ -89,12 +89,12 @@
                         </table>
                     </div>
                     <div class='register-item'>
-                        <p class='register-txt'> By creating an account you agree to our <a href="terms.jsp">Terms & Privacy</a>.</p>
-                        <button type="submit" class="create-btn">Create Account</button>
-                    </div>
+                        <p class='register-txt'> By creating an account you agree to our <a href="terms.jsp"><strong>Terms & Privacy</strong></a>.</p>
+                        <button type="submit" class="create-btn btn btn-outline-secondary btn-lg">Create Account</button>
+                    </div> 
                     
                     <div class='register-item'>
-                        <p class='register-txt'> <p>Already have an account? <a href="login.jsp">Sign in</a>.</p> </p>
+                        <p class='register-txt'> <p>Already have an account? <a href="login.jsp"><strong>Sign in</strong></a>.</p> </p>
                     </div>
                 </div>
             </form>
