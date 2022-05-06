@@ -88,7 +88,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class='register-item'>
+                    <div class='register-item' style="margin-bottom: 1cm">
                         <p class='register-txt'> By creating an account you agree to our <a href="terms.jsp"><strong>Terms & Privacy</strong></a>.</p>
                         <button type="submit" class="create-btn btn btn-outline-secondary btn-lg">Create Account</button>
                     </div> 
