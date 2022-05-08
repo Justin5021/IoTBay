@@ -107,7 +107,7 @@
                         </table>
                     </div>
                     <div class='register-item'>
-                        <p class='register-txt'> Do you agree to the <a href="terms.jsp"><strong>Terms & Conditions?</strong></a></p>
+                        <p class='register-txt'><strong> By creating an account you agree to our </strong><a href="terms.jsp"><strong>Terms & Conditions</strong></a></p>
                         <button type="submit" class="create-btn btn btn-outline-secondary btn-lg">Create Account</button>
                     </div>
                     
