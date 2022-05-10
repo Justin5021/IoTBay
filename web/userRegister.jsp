@@ -18,7 +18,7 @@
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-primary">
             <div class="container">
-                <a href="#" class="navbar-brand"> <h1> IoTBay </h1> </a>
+                <a href="index.jsp" class="navbar-brand"> <h1> IoTBay </h1> </a>
                 <button 
                     class="navbar-toggler" 
                     type="button" 

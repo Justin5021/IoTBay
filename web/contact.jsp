@@ -1,5 +1,5 @@
 <%-- 
-    Document   : about
+    Document   : contact
     Created on : 13/04/2022, 9:24:58 AM
     Author     : hooni
 --%>
@@ -67,7 +67,7 @@
                         <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
                         <div class="text">
                             <h3>Email</h3>
-                            <p>support@iotbay.com.au</p>
+                            <p><a href="mailto:Justin.W.Chin@student.uts.edu.au">Justin.W.Chin@student.uts.edu.au</a></p>
                         </div>
                     </div>
                 </div>

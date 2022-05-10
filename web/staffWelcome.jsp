@@ -31,7 +31,7 @@
         </nav>
         
         <% 
-//            int staffID = 1;
+            int staffID = 1;
             String firstName = request.getParameter("fname");
             String lastName = request.getParameter("lname");
             String email = request.getParameter("email");
@@ -52,7 +52,7 @@
             </button> 
         </form>
         <%
-            Staff staff = new Staff(firstName,lastName,email,password,phoneNumber,country);
+            Staff staff = new Staff(staffID,firstName,lastName,email,password,phoneNumber,country);
             session.setAttribute("staff",staff);
         %>
     </body>

@@ -55,4 +55,3 @@ VALUES
 ('Hor', 'Fun', 'hor.fun@gmail.com', 'Test1234', '1234567890', 'Australia'),
 ('Pad', 'Thai', 'pad.thai@gmail.com', 'Test1234', '1234567890', 'Australia');
 
--- Make 20 insertion script for other tables 

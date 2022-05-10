@@ -31,7 +31,7 @@
         </nav>
         
         <% 
-//            int userID = 1;
+            int userID = 1;
             String firstName = request.getParameter("fname");
             String lastName = request.getParameter("lname");
             String email = request.getParameter("email");
@@ -58,8 +58,7 @@
             </button> 
         </form>
         <%
-//            User user = new User(userID,fname,lname,email,password,phoneNumber,streetNumber, streetName,streetType,suburb,state,postcode,country);
-            User user = new User(firstName,lastName,email,password,phoneNumber,streetNumber,streetName,streetType,suburb,state,postcode,country);
+            User user = new User(userID,firstName,lastName,email,password,phoneNumber,streetNumber, streetName,streetType,suburb,state,postcode,country);
             session.setAttribute("user",user);
         %>
     </body>

@@ -43,19 +43,26 @@
         </nav>
         <div class="index-container text-center"  style="margin-top: 1cm">
             <h1 class="index-head" style="margin-top: 0.5cm ; margin-bottom: 1cm"><strong>Welcome to IoTBay</strong></h1>
-            <h3 class="index-text"> Please select your identity below</h3>
+            <h3 class="index-text"> What would you like to do? </h3>
             <div class="btn-container">
-                <div href="staffRegister.jsp" style="margin-bottom: 0.5cm; margin-top: 1cm">
+                <div class="btn-container-item" style="padding: 0.75rem">
                     <a href="userRegister.jsp">
                         <button class="btn btn-outline-secondary btn-lg">
-                            <i class="fas fa-cart-plus"></i> Customer
+                            <i class="fas fa-cart-plus"></i> Customer Sign-Up
                         </button>
                     <a/>
                 </div>
-                <div class="btn-container-item">
+                <div class="btn-container-item" style="padding: 0.75rem">
                     <a href="staffRegister.jsp">
                         <button class="btn btn-outline-secondary btn-lg">
-                            <i class="fas fa-briefcase"></i> Staff
+                            <i class="fas fa-briefcase"></i> Staff Sign-Up
+                        </button>
+                    </a> 
+                </div>
+                <div class="btn-container-item" style="padding: 0.75rem">
+                    <a href="browsing.jsp">
+                        <button class="btn btn-outline-secondary btn-lg">
+                            <i class="fas fa-search"></i> Catalogue Browse
                         </button>
                     </a> 
                 </div>
