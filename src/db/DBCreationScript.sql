@@ -34,10 +34,10 @@ CREATE TABLE Staff (
 CREATE TABLE PaymentInfo (
     PaymentInfoID INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
     CardHolderName VARCHAR(50), 
-    CardNumber VARCHAR(20),
-    CardExpiryDate VARCHAR(10), 
+    CardNumber VARCHAR(16),
+    CardExpiryDate DATE, 
     CardCountry VARCHAR(25), 
-    CardCVC INT,
+    CardCVC VARCHAR(3),
     UserID INT,
     PRIMARY KEY (PaymentInfoID),
     FOREIGN KEY (UserID) REFERENCES Users(UserID)

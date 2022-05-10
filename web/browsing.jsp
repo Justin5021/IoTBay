@@ -13,12 +13,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Main </title>
+        <title> Browse </title>
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-primary">
             <div class="container">
-                <a href="#" class="navbar-brand"> <h1> IoTBay </h1> </a>
+                <a href="index.jsp" class="navbar-brand"> <h1> IoTBay </h1> </a>
                 <button 
                     class="navbar-toggler" 
                     type="button" 
@@ -53,171 +53,136 @@
             </div>
 	</div>
         
+        <h1 class="heading">products</h1>
 
-<h1 class="heading">products</h1>
+        <div class="container text-center">
+            <h2 class="title">product type</h2>
 
-<div class="product-container">
+            <!--first row-->
+            <div class="row">
+                <div class="col">
+                    <div class="image">
+                        <img src="img" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>product1</h3>
+                        <div class="price">$550</div>
+                    </div>
+                    <div class="info">
+                        <h4>product info</h4>
+                        <p>infoinfoinfo</p>
+                        <a href="#"><button>add to cart</button></a>
+                    </div>
+                </div>
 
-<h2 class="title">product type</h2>
-<!-first row->
-<div class="row">
+                <div class="col">
+                    <div class="image">
+                        <img src="img" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>product2</h3>
+                        <div class="price">$550</div>
+                    </div>
+                    <div class="info">
+                        <h4>product info</h4>
+                        <p>infoinfoinfo</p>
+                        <a href="#"><button>add to cart</button></a>
+                    </div>
+                </div>
 
-  <div class="col">
+                <div class="col">
+                    <div class="image">
+                        <img src="img" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>product3</h3>
+                        <div class="price">$550</div>
+                    </div>
+                    <div class="info">
+                        <h4>product info</h4>
+                        <p>infoinfoinfo</p>
+                        <a href="#"><button>add to cart</button></a>
+                    </div>
+                </div>
 
-    <div class="image">
-      <img src="img" alt="">
-    </div>
+                <div class="col">
+                    <div class="image">
+                        <img src="img" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>product4</h3>
+                        <div class="price">$550</div>
+                    </div>
+                    <div class="info">
+                        <h4>product info</h4>
+                        <p>infoinfoinfo</p>
+                        <a href="#"><button>add to cart</button></a>
+                    </div>
+                </div>
+            </div>
 
-    <div class="content">
-      <h3>product1</h3>
-      <div class="price">$550</div>
-    </div>
+            <!--Second Row-->
+            <div class="row">
+                <div class="col">
+                    <div class="image">
+                      <img src="img" alt="">
+                    </div>
+                    <div class="content">
+                      <h3>product1</h3>
+                      <div class="price">$550</div>
+                    </div>
+                    <div class="info">
+                      <h4>product info</h4>
+                      <p> Info Info Info </p>
+                      <a href="#"><button>add to cart</button></a>
+                    </div>
+                </div>
 
-    <div class="info">
-      <h4>product info</h4>
-      <p>infoinfoinfo</p>
-      <a href="#"><button>add to cart</button></a>
-    </div>
+                <div class="col">
+                    <div class="image">
+                        <img src="img" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>product2</h3>
+                        <div class="price">$550</div>
+                    </div>
+                    <div class="info">
+                        <h4>product info</h4>
+                        <p>infoinfoinfo</p>
+                        <a href="#"><button>add to cart</button></a>
+                    </div>
+                </div>
 
-  </div>
-    
-    <div class="col">
+                <div class="col">
+                    <div class="image">
+                        <img src="img" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>product3</h3>
+                      <div class="price">$550</div>
+                    </div>
+                    <div class="info">
+                        <h4>product info</h4>
+                        <p>infoinfoinfo</p>
+                        <a href="#"><button>add to cart</button></a>
+                    </div>
+                </div>
 
-    <div class="image">
-      <img src="img" alt="">
-    </div>
-
-    <div class="content">
-      <h3>product2</h3>
-      <div class="price">$550</div>
-    </div>
-
-    <div class="info">
-      <h4>product info</h4>
-      <p>infoinfoinfo</p>
-      <a href="#"><button>add to cart</button></a>
-    </div>
-
-  </div>
-    
-    <div class="col">
-
-    <div class="image">
-      <img src="img" alt="">
-    </div>
-
-    <div class="content">
-      <h3>product3</h3>
-      <div class="price">$550</div>
-    </div>
-
-    <div class="info">
-      <h4>product info</h4>
-      <p>infoinfoinfo</p>
-      <a href="#"><button>add to cart</button></a>
-    </div>
-
-  </div>
-    
-    <div class="col">
-
-    <div class="image">
-      <img src="img" alt="">
-    </div>
-
-    <div class="content">
-      <h3>product4</h3>
-      <div class="price">$550</div>
-    </div>
-
-    <div class="info">
-      <h4>product info</h4>
-      <p>infoinfoinfo</p>
-      <a href="#"><button>add to cart</button></a>
-    </div>
-
-  </div>
-
-</div>
-<!-second row->
-<div class="row">
-
-  <div class="col">
-
-    <div class="image">
-      <img src="img" alt="">
-    </div>
-
-    <div class="content">
-      <h3>product1</h3>
-      <div class="price">$550</div>
-    </div>
-
-    <div class="info">
-      <h4>product info</h4>
-      <p>infoinfoinfo</p>
-      <a href="#"><button>add to cart</button></a>
-    </div>
-
-  </div>
-    
-    <div class="col">
-
-    <div class="image">
-      <img src="img" alt="">
-    </div>
-
-    <div class="content">
-      <h3>product2</h3>
-      <div class="price">$550</div>
-    </div>
-
-    <div class="info">
-      <h4>product info</h4>
-      <p>infoinfoinfo</p>
-      <a href="#"><button>add to cart</button></a>
-    </div>
-
-  </div>
-    
-    <div class="col">
-
-    <div class="image">
-      <img src="img" alt="">
-    </div>
-
-    <div class="content">
-      <h3>product3</h3>
-      <div class="price">$550</div>
-    </div>
-
-    <div class="info">
-      <h4>product info</h4>
-      <p>infoinfoinfo</p>
-      <a href="#"><button>add to cart</button></a>
-    </div>
-
-  </div>
-    
-    <div class="col">
-
-    <div class="image">
-      <img src="img" alt="">
-    </div>
-
-    <div class="content">
-      <h3>product4</h3>
-      <div class="price">$550</div>
-    </div>
-
-    <div class="info">
-      <h4>product info</h4>
-      <p>infoinfoinfo</p>
-      <a href="#"><button>add to cart</button></a>
-    </div>
-
-  </div>
-
-</div>
+                <div class="col">
+                    <div class="image">
+                        <img src="img" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>product4</h3>
+                        <div class="price">$550</div>
+                    </div>
+                    <div class="info">
+                        <h4>product info</h4>
+                        <p>infoinfoinfo</p>
+                        <a href="#"><button>add to cart</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
