@@ -147,17 +147,17 @@ VALUES
 ('Food Road 19 Avenue', '5869023459'),
 ('Digimon Road 20 Avenue', '5918572841');
 
-INSERT INTO IOTBAY.PRODUCT ()
-VALUES
-(),
-
-INSERT INTO IOTBAY.CART ()
-VALUES
-(),
-
-INSERT INTO IOTBAY.OrderLine ()
-VALUES
-(),
+-- INSERT INTO IOTBAY.PRODUCT ()
+-- VALUES
+-- ();
+-- 
+-- INSERT INTO IOTBAY.CART ()
+-- VALUES
+-- ();
+-- 
+-- INSERT INTO IOTBAY.OrderLine ()
+-- VALUES
+-- ();
 
 INSERT INTO IOTBAY.INVOICE (InvoiceDate, PaymentID)
 VALUES
