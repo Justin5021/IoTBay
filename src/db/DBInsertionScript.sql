@@ -147,14 +147,33 @@ VALUES
 ('Food Road 19 Avenue', '5869023459'),
 ('Digimon Road 20 Avenue', '5918572841');
 
--- INSERT INTO IOTBAY.PRODUCT ()
+-- INSERT INTO IOTBAY.PRODUCT (ProductSerialNum, ProductName, ProductCategory, ProductBrand, ProductPrice, ProductQuantity, ProductImageURL, SupplierID)
 -- VALUES
--- ();
--- 
--- INSERT INTO IOTBAY.CART ()
--- VALUES
--- ();
--- 
+-- (1,''),
+
+INSERT INTO IOTBAY.CART ()
+VALUES
+(1,1,3),
+(1,2,6),
+(1,3,4),
+(1,4,2),
+(1,5,8),
+(2,7,4),
+(2,9,1),
+(3,9,5),
+(3,8,4),
+(4,1,1),
+(4,6,3),
+(4,7,3),
+(5,1,3),
+(6,1,3),
+(6,8,2),
+(6,9,7),
+(7,6,3),
+(8,7,2),
+(9,1,3),
+(10,1,3);
+
 -- INSERT INTO IOTBAY.OrderLine ()
 -- VALUES
 -- ();

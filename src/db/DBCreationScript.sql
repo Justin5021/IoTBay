@@ -85,13 +85,6 @@ CREATE TABLE CART(
     UserID INT,
     ProductID INT,
     CartQuantity INT,
-    ProductSerialNum INT, 
-    ProductName VARCHAR(50),
-    ProductCategory VARCHAR(50), 
-    ProductBrand VARCHAR(50), 
-    ProductPrice DECIMAL(15,2),
-    ProductQuantity INT, 
-    ProductImage VARCHAR(250), 
     PRIMARY KEY (UserID, ProductID),
     FOREIGN KEY (UserID) REFERENCES Users(UserID),
     FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
