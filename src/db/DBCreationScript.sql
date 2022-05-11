@@ -75,7 +75,7 @@ CREATE TABLE Product (
     ProductBrand VARCHAR(50), 
     ProductPrice DECIMAL(15,2),
     ProductQuantity INT, 
-    ProductImage VARCHAR(250),
+    ProductImageURL VARCHAR(250),
     SupplierID INT,
     PRIMARY KEY (ProductID),
     FOREIGN KEY (SupplierID) REFERENCES Supplier(SupplierID)
