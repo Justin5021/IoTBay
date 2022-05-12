@@ -1,7 +1,7 @@
 <%-- 
     Document   : paymentHistory
     Created on : Apr 19, 2022, 4:14:28 PM
-    Author     : jacky
+    Author     : Jacky Bahary 13997263
 --%>
 
 <%@page import="java.sql.DriverManager"%>
