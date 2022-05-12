@@ -4,7 +4,28 @@
     Author     : jacky
 --%>
 
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
 
+<%
+String driverName = "com.mysql.jdbc.Driver";
+String connectionUrl = "jdbc:derby://localhost:1527/";
+String dbName = "usersdb";
+String userId = "iotbay";
+String password = "admin";
+
+try {
+Class.forName(driverName);
+} catch (ClassNotFoundException e) {
+e.printStackTrace();
+}
+
+Connection connection = null;
+Statement statement = null;
+ResultSet resultSet = null;
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -49,19 +70,32 @@
                     <thead>
                       <tr>
                         <th scope="col">Payment ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Date/Time</th>
-                        <th scope="col">Amount</th>
+                        <th scope="col">Payment Total</th>
+                        <th scope="col">Payment Info ID</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                      </tr>
-                    </tbody>
+                    <%
+                        try {
+                        connection = DriverManager.getConnection(
+                        connectionUrl + dbName, userId, password);
+                        statement = connection.createStatement();
+                        String sql = "SELECT * FROM PAYMENT";
+
+                        resultSet = statement.executeQuery(sql);
+                        while (resultSet.next()) {
+                    %>
+                    <tr>
+                        <td><%=resultSet.getString("PaymentID")%></td>
+                        <td><%=resultSet.getString("PaymentTotal")%></td>
+                        <td><%=resultSet.getString("PaymentInfoID")%></td>
+                    </tr>
+                    <%
+                        }
+
+                        } catch (Exception e) {
+                        e.printStackTrace();
+                        }
+                    %>
                 </table>
             </div>
         </div>
