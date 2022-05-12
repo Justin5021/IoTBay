@@ -1,10 +1,31 @@
 <%-- 
-    Document   : paymentHistory
+    Document   : orderHistory
     Created on : Apr 19, 2022, 4:14:28 PM
     Author     : jacky
 --%>
 
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
 
+<%
+String driverName = "com.mysql.jdbc.Driver";
+String connectionUrl = "jdbc:derby://localhost:1527/";
+String dbName = "usersdb";
+String userId = "iotbay";
+String password = "admin";
+
+try {
+Class.forName(driverName);
+} catch (ClassNotFoundException e) {
+e.printStackTrace();
+}
+
+Connection connection = null;
+Statement statement = null;
+ResultSet resultSet = null;
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -49,19 +70,34 @@
                     <thead>
                       <tr>
                         <th scope="col">Order ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Date/Time</th>
-                        <th scope="col">Amount</th>
+                        <th scope="col">Order Date</th>
+                        <th scope="col">Order Status</th>
+                        <th scope="col">Payment ID</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                      </tr>
-                    </tbody>
+                    <%
+                        try {
+                        connection = DriverManager.getConnection(
+                        connectionUrl + dbName, userId, password);
+                        statement = connection.createStatement();
+                        String sql = "SELECT * FROM ORDERS";
+
+                        resultSet = statement.executeQuery(sql);
+                        while (resultSet.next()) {
+                    %>
+                    <tr>
+                        <td><%=resultSet.getString("OrderID")%></td>
+                        <td><%=resultSet.getString("OrderDate")%></td>
+                        <td><%=resultSet.getString("OrderStatus")%></td>
+                        <td><%=resultSet.getString("PaymentID")%></td>
+                    </tr>
+                    <%
+                        }
+
+                        } catch (Exception e) {
+                        e.printStackTrace();
+                        }
+                    %>
                 </table>
             </div>
         </div>
