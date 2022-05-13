@@ -86,7 +86,7 @@
                     
         <div class="btn-container text-center">
             <div class="btn-container-item" style="margin-bottom: 0.5cm">
-                <a href="#">
+                <a href="browsing.jsp">
                     <button class="shop-btn btn btn-outline-secondary btn-lg">
                         <i class="fas fa-shopping-cart"></i> Shop
                     </button>
