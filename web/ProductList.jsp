@@ -3,7 +3,27 @@
     Created on : 2022年4月27日, 上午1:47:08
     Author     : Pei-han lee
 --%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%
+String driverName = "com.mysql.jdbc.Driver";
+String connectionUrl = "jdbc:derby://localhost:1527/";
+String dbName = "usersdb";
+String userId = "iotbay";
+String password = "admin";
 
+try {
+Class.forName(driverName);
+} catch (ClassNotFoundException e) {
+e.printStackTrace();
+}
+
+Connection connection = null;
+Statement statement = null;
+ResultSet resultSet = null;
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -41,42 +61,44 @@
                 </div>
             </div>
         </nav>
-        <div class ="container my-3">
+                <div class ="container my-3">
             <div class ="table-responsive">
                 <table class="table table-sm table-bordered">
-                    <p class="display-6">Product</p>
-                    <thead>
-                      <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Serial_Number</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Category</th>
-                        <th scope="col">Brand</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Image</th>
-                        <th scope="col">Supplier_ID</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td> <input class='add-product' type="text" placeholder="Enter ProductID" name="productID" > </td>
-                        <td> <input class='add-product' type="text" placeholder="Enter Serial_Num" name="serialNum" > </td>
-                        <td> <input class='add-product' type="text" placeholder="Enter ProductName" name="product_name" > </td>
-                        <td> <input class='add-product' type="text" placeholder="Enter Category" name="category" > </td>
-                        <td> <input class='add-product' type="text" placeholder="Enter Brand" name="brand" > </td>
-                        <td> <input class='add-product' type="text" placeholder="Enter Price" name="price" > </td>
-                        <td> <input class='add-product' type="text" placeholder="Enter Quantity" name="quantity" > </td>
-                        <td> <input class='add-product' type="text" placeholder="URL" name="image" > </td>
-                        <td> <input class='add-product' type="text" placeholder="Enter SupplierID" name="supplierID" > </td>
-                      </tr>
-                    </tbody>
-                </table>
+                    <p class="display-6">Product List</p>
+                    <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Brand</th>
+                            <th scope="col">Price</th>
+
+                    </tr>
+<%
+                        try {
+                        connection = DriverManager.getConnection(
+                        connectionUrl + dbName, userId, password);
+                        statement = connection.createStatement();
+                        String sql = "SELECT * FROM PRODUCT";
+
+                        resultSet = statement.executeQuery(sql);
+                        while (resultSet.next()) {
+                    %>
+                                    <tr>
+                            <td><%=resultSet.getString("PRODUCTID") %></td>
+                            <td><%=resultSet.getString("PRODUCTNAME") %></td>
+                            <td><%=resultSet.getString("PRODUCTBRAND") %></td>
+                            <td><%=resultSet.getString("PRODUCTPRICE") %></td>
+                            <td><a href="DeleteProduct.jsp?id=<%=resultSet.getString("id") %>"><button type="button"  class="delete">Delete</button></a></td>
+                     
+                                    </tr>
+                    <%
+                        }
+
+                        } catch (Exception e) {
+                        e.printStackTrace();
+                        }
+                    %>
+                                </table> 
             </div>
-            <div class="btn-container">
-                <button type="submit" class="add-product" >Add</button>
-            </div>
-        </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>
