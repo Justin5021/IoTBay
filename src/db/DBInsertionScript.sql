@@ -124,35 +124,53 @@ VALUES
 ('2022-6-19','Delivered',19),
 ('2022-6-20','Cancelled',20);
 
-INSERT INTO IOTBAY.Supplier (SupplierAddress, SupplierPhone)
+INSERT INTO IOTBAY.Supplier (SupplierName, SupplierAddress, SupplierPhone, SupplierEmail)
 VALUES
-('Road Road 1 Avenue', '1234567895'),
-('Starlight Road 2 Avenue', '5912859202'),
-('Pokemon Road 3 Avenue', '4564545871'),
-('Victory Road 4 Avenue', '2363483855'),
-('Diamond Road 5 Avenue', '2365260794'),
-('Board Road 6 Avenue', '2369960305'),
-('Damian Road 7 Avenue', '1500623557'),
-('Zinger Road 8 Avenue', '2136397982'),
-('Stinger Road 9 Avenue', '8939160468'),
-('Water Road 10 Avenue', '2329783941'),
-('Blue Road 11 Avenue', '6592696435'),
-('Zen Road 12 Avenue', '1234567893'),
-('Split Road 13 Avenue', '1235678916'),
-('Half Road 14 Avenue', '3466236437'),
-('Plain Road 15 Avenue', '9558157921'),
-('Safe Road 16 Avenue', '1647349385'),
-('Lame Road 17 Avenue', '9581859301'),
-('Fun Road 18 Avenue', '1850284958'),
-('Food Road 19 Avenue', '5869023459'),
-('Digimon Road 20 Avenue', '5918572841');
+('HiLetGo Electronics','Road Road 1 Avenue', '1234567895','hiletgoelectronics@gmail.com'),
+('4 Seasons', 'Starlight Road 2 Avenue', '5912859202','fourseasons@gmail.com'),
+('Prologue Shop','Pokemon Road 3 Avenue', '4564545871','prologue.shop@gmail.com'),
+('Networkers','Victory Road 4 Avenue', '2363483855','networkers@gmail.com'),
+('Teragigabyte','Diamond Road 5 Avenue', '2365260794','tera.gigabyte@gmail.com'),
+('IT Zone','Board Road 6 Avenue', '2369960305','it.zone@gmail.com'),
+('IT Expanse','Damian Road 7 Avenue', '1500623557','it.expanse@gmail.com'),
+('Fried Electronics','Zinger Road 8 Avenue', '2136397982','fried.electronics@gmail.com'),
+('Pokemon Town','Stinger Road 9 Avenue', '8939160468','pokemon.town@gmail.com'),
+('Pallet Town','Water Road 10 Avenue', '2329783941','pallet.town@gmail.com'),
+('Dark Hedges','Blue Road 11 Avenue', '6592696435','dark.hedges@gmail.com'),
+('Downtown Electronics','Zen Road 12 Avenue', '1234567893','downtown.electronics@gmail.com'),
+('Wonders of Pi','Split Road 13 Avenue', '1235678916','pi.ofwonders@gmail.com'),
+('Computer Mart','Half Road 14 Avenue', '3466236437','computer.mart@gmail.com'),
+('Golden Tech Electronics','Plain Road 15 Avenue', '9558157921','golden.tech@gmail.com'),
+('Networks at Work','Safe Road 16 Avenue', '1647349385','networks.work@gmail.com'),
+('Starlink','Lame Road 17 Avenue', '9581859301'),'starlink@gmail.com',
+('Aware Software','Fun Road 18 Avenue', '1850284958','aware.soft@gmail.com'),
+('Cupid or Cubic','Food Road 19 Avenue', '5869023459'),'cupid.cubic@gmail.com',
+('Primary Village','Digimon Road 20 Avenue', '5918572841','primary.village@gmail.com');
 
--- INSERT INTO IOTBAY.PRODUCT (ProductSerialNum, ProductName, ProductCategory, ProductBrand, ProductPrice, ProductQuantity, ProductImageURL, SupplierID)
--- VALUES
--- (1,''),
-
-INSERT INTO IOTBAY.CART ()
+INSERT INTO IOTBAY.PRODUCT (ProductSerialNum, ProductName, ProductCategory, ProductBrand, ProductPrice, ProductQuantity, ProductImageURL, SupplierID)
 VALUES
+(1,'DHT22','Sensors','HiLetGo Electronics',12.38,100,'DHT22.jpg',1),
+(2,'DS18B20','Sensors','HiLetGo Electronics',16.04,50,'DS18B20.jpg',1),
+(3,'BMP180 GY-68','Sensors','HiLetGo Electronics',7.28,35,'BMP180.jpg',1),
+(4,'MQ-2 Gas Sensor','Sensors','OctagonStar',7.28,100,'MQ2.jpg',3),
+(5,'RT-AX86','Networking','ASUS',363.2,50,'RTAX86.jpg',3),
+(6,'RT-AX82U','Networking','ASUS',285.12,100,'RTAX82U.jpg',3),
+(7,'RT-AX82U Gundam Edition','Networking','ASUS',338.21,50,'RTAX82UGundam.png',3),
+(8,'GY-271 Compass','Navigation','HiLetGo Electronics',9.61,100,'GY271.png',1),
+(9,'DS1307 Real Time Clock','Navigation','Adafruit Industries',10.94,100,'DS1307.png',5),
+(10,'SSD1306 OLED','Display','MakerFocus',14.57,20,'SSD1306.png',5),
+(11,'SIM800L GSM Module','Wireless','HAOYU Electronics',9.94,20,'SIM800L.png',6),
+(12,'LM2596 Buck Step-Down Converter','Power Supply','BULVACK',5.82,35,'LM2596.png',7),
+(13,'MAX7219 8x8 Matrix Display','Display','HiLetGo Electronics',12.24,100,'MAX7219.png',8),
+(14,'PCA9685 Servo','Motors','Songhe Electronics',20.24,35,'PCA9685.png',9),
+(15,'TM1637 4-Digit 7-Segment Display','Display','Hyuduo',13.71,25,'TM1637.png',10),
+(16,'MPU-6050 4-Digit 7-Segment Display','Navigation','HiLetGo Electronics',3.49,25,'MPU6050.png',11),
+(17,'74HC595 Shift Register','Modules','MCIGICM',10.2,170,'74HC595.png',12),
+(18,'L293D Motor Driver','Motors','Adafruit',14.43,98,'L293D.png',13),
+(19,'A4988 Stepper Driver','Motors','BIQU',3.07,98,'A4988.png',14),
+(20,'4x4 Membrane Keypad with Arduino','modules','Songhe',2.61,170,'4x4MembraneKeypad.png',15);
+
+INSERT INTO IOTBAY.CART VALUES
 (1,1,3),
 (1,2,6),
 (1,3,4),
@@ -174,9 +192,27 @@ VALUES
 (9,1,3),
 (10,1,3);
 
--- INSERT INTO IOTBAY.OrderLine ()
--- VALUES
--- ();
+INSERT INTO IOTBAY.OrderLine VALUES
+(1,1,3),
+(2,1,6),
+(3,1,4),
+(4,2,2),
+(5,2,8),
+(7,3,4),
+(9,3,1),
+(9,4,5),
+(8,4,4),
+(1,5,1),
+(6,5,3),
+(7,5,3),
+(1,6,3),
+(1,7,3),
+(8,7,2),
+(9,7,7),
+(6,8,3),
+(7,9,2),
+(1,10,3),
+(1,11,3);
 
 INSERT INTO IOTBAY.INVOICE (InvoiceDate, PaymentID)
 VALUES

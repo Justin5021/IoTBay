@@ -62,8 +62,10 @@ CREATE TABLE Orders (
 
 CREATE TABLE Supplier (
     SupplierID INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+    SupplierName VARCHAR(50) NOT NULL,
     SupplierAddress VARCHAR(50) NOT NULL, 
-    SupplierPhone VARCHAR(10) NOT NULL, 
+    SupplierPhone VARCHAR(10) NOT NULL,
+    SupplierEmail VARCHAR(50) NOT NULL, 
     PRIMARY KEY (SupplierID)
 );
 
