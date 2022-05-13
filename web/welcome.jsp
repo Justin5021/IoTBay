@@ -75,9 +75,5 @@
                 </button> 
             </form>
         </div>
-        <%
-            User user = new User(userID,firstName,lastName,email,password,phoneNumber,streetNumber, streetName,streetType,suburb,state,postcode,country);
-            session.setAttribute("user",user);
-        %>
     </body>
 </html>

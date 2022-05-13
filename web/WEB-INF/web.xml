@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee (Links to an external site.)" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance (Links to an external site.)" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee (Links to an external site.) http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd (Links to an external site.)">
+    <servlet>
+        <servlet-name>ConnServlet </servlet-name>
+        <servlet-class>uts.isd.controller.ConnServlet </servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>uts.isd.controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>uts.isd.controller.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StaffLoginServlet</servlet-name>
+        <servlet-class>uts.isd.controller.StaffLoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StaffLogoutServlet</servlet-name>
+        <servlet-class>uts.isd.controller.StaffLogoutServlet</servlet-class>
+    </servlet>
+    
+    
+    <servlet-mapping>
+        <servlet-name> ConnServlet </servlet-name>
+        <url-pattern> /ConnServlet </url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StaffLoginServlet</servlet-name>
+        <url-pattern>/StaffLoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StaffLogoutServlet</servlet-name>
+        <url-pattern>/StaffLogoutServlet</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

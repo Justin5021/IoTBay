@@ -108,3 +108,11 @@ CREATE TABLE Invoice (
     PRIMARY KEY (InvoiceID),
     FOREIGN KEY (PaymentID) REFERENCES Payment(PaymentID)
 );
+
+CREATE TABLE UserLogs (
+    UserID INT,
+    STATUS VARCHAR(15),
+    CurrentTime TimeStamp,
+    PRIMARY KEY (UserID),
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);

@@ -47,8 +47,8 @@
                     <h1 class="login-title"><strong>Login</strong></h1>
                 </div>
                 <div class ="login-item row justify-content-center">
-                    <table class ="login-table table table-responsive" style="width: auto;">
-                        <form class="login-table" action="welcome.jsp" method ="POST">
+                    <form class="login-table" action="LoginServlet" method ="POST">
+                        <table class ="login-table table table-responsive" style="width: auto;">
                             <tr>
                                 <td>
                                     <label class="login-text" for="email">Email:</label>
@@ -64,12 +64,12 @@
                                 <td>
                                     <input class="login-field" type="password" id="pass" name="pass">
                                 </td>
-                            </tr>
-                        </form>
-                    </table>
-                </div>
-                <div>
-                    <input class="login-btn" type="submit" value="Login">
+                            </tr>    
+                        </table>
+                        <div>
+                            <button href="welcome.jsp" type="submit" class="btn login">Login</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
