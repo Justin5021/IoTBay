@@ -12,15 +12,19 @@ import java.io.Serializable;
  */
 public class Supplier implements Serializable{
     private int supplierID;
-    private String supplierAddress, supplierPhone;
+    private String supplierAddress, supplierPhone, supplierName, supplierEmail;
     
     public Supplier(
             int supplierID,
             String supplierAddress,
-            String supplierPhone){
+            String supplierPhone,
+            String supplierName,
+            String supplierEmail){
         this.supplierID = supplierID;
         this.supplierAddress = supplierAddress;
         this.supplierPhone = supplierPhone;
+        this.supplierName = supplierName;
+        this.supplierEmail = supplierEmail;
     }
     
     public int getSupplierID() {
@@ -45,5 +49,21 @@ public class Supplier implements Serializable{
     
     public void setSupplierPhone(String supplierPhone) {
         this.supplierPhone = supplierPhone;
+    }
+    
+    public String getSupplierName() {
+        return supplierName;
+    }
+    
+    public void setSupplierName(String supplierName) {
+        this.supplierName = supplierName;
+    }
+    
+    public String getSupplierEmail() {
+        return supplierEmail;
+    }
+    
+    public void setSupplierEmail(String supplierEmail) {
+        this.supplierEmail = supplierEmail;
     }
 }
