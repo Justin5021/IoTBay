@@ -1,6 +1,6 @@
 <%-- 
-    Document   : order
-    Created on : May 12, 2022, 9:53 PM
+    Document   : payment
+    Created on : May 13, 2022, 2:26:19 PM
     Author     : Jacky Bahary 13997263
 --%>
 
@@ -13,7 +13,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Order </title>
+        <title> Payment </title>
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-primary">
@@ -42,39 +42,34 @@
             </div>
         </nav>
         <div class="container text-center">
-            <form class="order-form" method="POST">
+            <form class="payment-form" method="POST">
                 
-                <div class='order-container'>
-                    <div class='order-item' style="margin: 1cm">
-                        <h1 class="order-title"><strong>Order Form</strong></h1>
+                <div class='payment-container'>
+                    <div class='payment-item' style="margin: 1cm">
+                        <h1 class="payment-title"><strong>Payment Form</strong></h1>
                     </div>
-                    <div class='order-item row justify-content-center'>
-                        <table class="order-table table table-responsive" style="width: auto;">
+                    <div class='payment-item row justify-content-center'>
+                        <table class="payment-table table table-responsive" style="width: auto;">
                             <tbody>
                                 <tr>
-                                    <td> <label for="orderID">Order ID</label> </td>
-                                    <td> <input class='order-field' type="text" placeholder="Enter Order ID" name="orderID" required> </td>
+                                    <td> <label for="paymentID">Payment ID</label> </td>
+                                    <td> <input class='payment-field' type="text" placeholder="Enter Payment ID" name="paymentID" required> </td>
                                 </tr>
                                 
                                 <tr>
-                                    <td> <label for="orderDate">Order Date</label> </td>
-                                    <td> <input class='order-field' type="text" placeholder="Enter Order Date" name="orderDate" required> </td>
+                                    <td> <label for="paymentTotal">Payment Total</label> </td>
+                                    <td> <input class='payment-field' type="text" placeholder="Enter Payment Total" name="paymentTotal" required> </td>
                                 </tr>
                                 
                                 <tr>
-                                    <td> <label for="orderStatus">Order Status</label> </td>
-                                    <td> <input class='order-field' type="text" placeholder="Enter Order Status" name="orderStatus" required> </td>
-                                </tr>
-                                
-                                <tr>
-                                    <td> <label for="productID">Product ID</label> </td>
-                                    <td> <input class='order-field' type="text" placeholder="Enter Product ID" name="productID" required> </td>
+                                    <td> <label for="paymentInfoID">Payment Info ID</label> </td>
+                                    <td> <input class='payment-field' type="text" placeholder="Enter Payment Info ID" name="paymentInfoID" required> </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class='order-item' style="margin-bottom: 1cm">
-                        <button type="submit" class="order-btn btn btn-outline-secondary btn-lg">Order</button>
+                    <div class='payment-item' style="margin-bottom: 1cm">
+                        <button type="submit" class="payment-btn btn btn-outline-secondary btn-lg">Pay</button>
                     </div> 
                 </div>
             </form>
