@@ -42,7 +42,7 @@
             </div>
         </nav>
         
-        <div class="container">
+<!--        <div class="container">
             <div>
 		<form class="navbar-form navbar-right">
                     <div class="form-group">
@@ -53,10 +53,10 @@
             </div>
 	</div>
         
-        <h1 class="heading">products</h1>
+        <h1 class="heading">products</h1>-->
 
-        <div class="container text-center">
-            <h2 class="title">product type</h2>
+        <div class="container text-center pt-4">
+            <h2 class="title">Products</h2>
 
             <!--first row-->
             <div class="row">
