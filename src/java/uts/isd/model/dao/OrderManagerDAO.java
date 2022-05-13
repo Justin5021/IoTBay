@@ -16,11 +16,11 @@ import java.sql.Statement;
  *
  * @author Jacky Bahary 13997263
  */
-public class OrderDBManager {
+public class OrderManagerDAO {
     private final Statement st; //used to execute SQL queries within java code
     private Connection conn;
     
-    public OrderDBManager(Connection conn) throws SQLException {
+    public OrderManagerDAO(Connection conn) throws SQLException {
         st = conn.createStatement();
         this.conn = conn;
     }
