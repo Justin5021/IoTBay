@@ -142,9 +142,9 @@ VALUES
 ('Computer Mart','Half Road 14 Avenue', '3466236437','computer.mart@gmail.com'),
 ('Golden Tech Electronics','Plain Road 15 Avenue', '9558157921','golden.tech@gmail.com'),
 ('Networks at Work','Safe Road 16 Avenue', '1647349385','networks.work@gmail.com'),
-('Starlink','Lame Road 17 Avenue', '9581859301'),'starlink@gmail.com',
+('Starlink','Lame Road 17 Avenue', '9581859301','starlink@gmail.com'),
 ('Aware Software','Fun Road 18 Avenue', '1850284958','aware.soft@gmail.com'),
-('Cupid or Cubic','Food Road 19 Avenue', '5869023459'),'cupid.cubic@gmail.com',
+('Cupid or Cubic','Food Road 19 Avenue', '5869023459','cupid.cubic@gmail.com'),
 ('Primary Village','Digimon Road 20 Avenue', '5918572841','primary.village@gmail.com');
 
 INSERT INTO IOTBAY.PRODUCT (ProductSerialNum, ProductName, ProductCategory, ProductBrand, ProductPrice, ProductQuantity, ProductImageURL, SupplierID)
