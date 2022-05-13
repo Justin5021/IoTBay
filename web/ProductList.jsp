@@ -70,6 +70,7 @@ ResultSet resultSet = null;
                             <th scope="col">Name</th>
                             <th scope="col">Brand</th>
                             <th scope="col">Price</th>
+                            <th scope="col"></th>
 
                     </tr>
 <%
@@ -80,6 +81,7 @@ ResultSet resultSet = null;
                         String sql = "SELECT * FROM PRODUCT";
 
                         resultSet = statement.executeQuery(sql);
+                        int i=0;
                         while (resultSet.next()) {
                     %>
                                     <tr>
@@ -87,12 +89,13 @@ ResultSet resultSet = null;
                             <td><%=resultSet.getString("PRODUCTNAME") %></td>
                             <td><%=resultSet.getString("PRODUCTBRAND") %></td>
                             <td><%=resultSet.getString("PRODUCTPRICE") %></td>
-                            <td><a href="DeleteProduct.jsp?id=<%=resultSet.getString("id") %>"><button type="button"  class="delete">Delete</button></a></td>
+                            <td><a href="DeleteProduct.jsp?id=<%=resultSet.getString("PRODUCTID") %>"><button type="button" class="btn-container">Delete</button></a></td>
                      
                                     </tr>
                     <%
+                        i++;
                         }
-
+                        connection.close();
                         } catch (Exception e) {
                         e.printStackTrace();
                         }
