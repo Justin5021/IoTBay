@@ -157,10 +157,13 @@ public class ProductDBManager {
         String query = 
                 "UPDATE IOTUSER.PRODUCT SET " +
                 " PRODUCTID= '" + id + "', " +
-                " PRODUCT= " + price + ", " +
-                " = '" + desc + "', " +
-                " = '" + type + "', " +
-                " = " + quant + " " +
+                " PRODUCTSERIALNUM= " + serialNum + ", " +
+                " SUPPLIERID = '" + supplierID + "', " +
+                " PRODUCTPRICE= '" + price + "', " +
+                " PRODUCTNAME= " + name + " " +
+                " PRODUCTCATEGORY= " + category + " " +
+                " PRODUCTBRAND= " + brand + " " +
+                " PRODUCTIMAGEURL= " + image + " " +
                 "WHERE PROD_ID = " + id;
         
         st.execute(query);
