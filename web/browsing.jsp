@@ -56,7 +56,7 @@
                 <div class="col-xl-3 col-md-4 col-sm-6 mb-4"> 
                     <div class="card h-100 box-shadow">
                         <div class="card-body">
-                            <img class="card-img-top" src="images/" + <%=product.getProductImageURL()%> alt="Photo of " + <%= product.getProductName()%>>
+                            <img class="card-img-top" src="images/<%=product.getProductImageURL()%>" alt="Photo of <%= product.getProductName()%> ">
                             <h5 class="card-title"><%= product.getProductName()%></h5>
                             <p class="card-text">Price: <%= priceFormat.format(product.getProductPrice())%></p>
                             <% if (product.getProductQuantity()> 0) { %>
