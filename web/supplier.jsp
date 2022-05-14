@@ -79,8 +79,8 @@
                                 <td>${listout.supplierPhone}</td>
                                 <td>${listout.supplierName}</td>
                                 <td>${listout.supplierEmail}</td>
-                                <td><a class="btn-info" href="SupplierDBManager?id=<%=Supplier.getId()%>">add</a>&nbsp;
-                                    <a class="btn-danger" href="SupplierDBManager?id=<%=Supplier.getID()%>">Delete</a>
+                                <td><a class="btn-info" href="AddSupplierServlet?id=<%=Supplier.getID()%>">add</a>&nbsp;
+                                    <a class="btn-danger" href="DeleteSupplierServlet?id=<%=Supplier.getID()%>">Delete</a>
                                 </td>
                             </tr>
 
