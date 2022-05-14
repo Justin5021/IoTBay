@@ -23,38 +23,53 @@ import uts.isd.model.dao.ProductDBManager;
  * @author Jacky Bahary 13997263
  */
 public class BrowseServlet extends HttpServlet {
-    ArrayList<Product> productList;
-    HttpSession session;
-    ProductDBManager productDBManager;
+//    ArrayList<Product> productList;
+//    HttpSession session;
+//    ProductDBManager productDBManager;
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // create product array
-        productList = new ArrayList<>();
+        ArrayList<Product> productList = new ArrayList<>();
         
         //get session
-        session = request.getSession();
+        HttpSession session = request.getSession();
         
         //get product manager
-        productDBManager = (ProductDBManager)session.getAttribute("productDBManager");
+        ProductDBManager productDBManager = (ProductDBManager)session.getAttribute("productDBManager");
         
-        try { 
-            // get all products and push it into product array variable
+//        try { 
+//            // get all products and push it into product array variable
+//            productList = productDBManager.listAllProducts();
+//            
+//            // if product array is not empty, then show product list
+//            if (!productList.isEmpty()) {
+//                session.setAttribute("products", productList);
+//            }
+//        } 
+//        catch (SQLException ex) {           
+//            Logger.getLogger(BrowseServlet.class.getName()).log(Level.SEVERE, null, ex);  
+//        } 
+//        finally {
+//            //anything that happens will eventually show browsing page
+//            request.getRequestDispatcher("browsing.jsp").include(request, response);
+//            //session.setAttribute("productErr", null);
+//        }
+          try {
             productList = productDBManager.listAllProducts();
-            
-            // if product array is not empty, then show product list
             if (!productList.isEmpty()) {
                 session.setAttribute("products", productList);
+                request.getRequestDispatcher("browsing.jsp").include(request, response);
             }
-        } 
-        catch (SQLException ex) {           
-            Logger.getLogger(BrowseServlet.class.getName()).log(Level.SEVERE, null, ex);  
-        } 
-        finally {
-            //anything that happens will eventually show browsing page
-            request.getRequestDispatcher("browsing.jsp").include(request, response);
-            //session.setAttribute("productErr", null);
-        }
+//            else {
+//                session.setAttribute("empty", "Empty List");
+//                request.getRequestDispatcher("main.jsp").include(request, response);
+//            }
+            } 
+          catch (SQLException | NullPointerException ex) {
+                //System.out.println(ex.getMessage() == null ? "Incorrect Email or Password" : "Welcome");
+                System.out.println(ex.getMessage());
+          }
         
     }
 }
