@@ -61,10 +61,10 @@ public class BrowseServlet extends HttpServlet {
                 session.setAttribute("products", productList);
                 request.getRequestDispatcher("browsing.jsp").include(request, response);
             }
-//            else {
-//                session.setAttribute("empty", "Empty List");
-//                request.getRequestDispatcher("main.jsp").include(request, response);
-//            }
+            else {
+                session.setAttribute("empty", "Empty List");
+                request.getRequestDispatcher("main.jsp").include(request, response);
+            }
             } 
           catch (SQLException | NullPointerException ex) {
                 //System.out.println(ex.getMessage() == null ? "Incorrect Email or Password" : "Welcome");
