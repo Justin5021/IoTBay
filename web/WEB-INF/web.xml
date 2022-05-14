@@ -29,6 +29,17 @@
         <servlet-name>OrderHistoryServlet</servlet-name>
         <servlet-class>uts.isd.controller.OrderHistoryServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>uts.isd.controller.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StaffRegisterServlet</servlet-name>
+        <servlet-class>uts.isd.controller.RegisterServlet</servlet-class>
+    </servlet>
+    
+    
+    <!--Servlet Mapping-->
     <servlet-mapping>
         <servlet-name> ConnServlet </servlet-name>
         <url-pattern> /ConnServlet </url-pattern>
@@ -57,6 +68,15 @@
         <servlet-name>OrderHistoryServlet</servlet-name>
         <url-pattern>/OrderHistoryServlet</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StaffRegisterServlet</servlet-name>
+        <url-pattern>/StaffRegisterServlet</url-pattern>
+    </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30

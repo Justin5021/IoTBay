@@ -69,15 +69,15 @@
                                 </tr>
                                 <tr>
                                     <td> <label for="street-number">Street Number</label> </td>
-                                    <td> <input class='register-field' type="text" placeholder="Enter Street Number" name="street-number" required> </td>
+                                    <td> <input class='register-field' type="text" placeholder="Enter Street Number" name="streetnum" required> </td>
                                 </tr>
                                 <tr>
                                     <td> <label for="street-name">Street Name</label> </td>
-                                    <td> <input class='register-field' type="text" placeholder="Enter Street Name" name="street-name" required> </td>
+                                    <td> <input class='register-field' type="text" placeholder="Enter Street Name" name="streetname" required> </td>
                                 </tr>
                                 <tr>
                                     <td> <label for="street-type">Street Type</label> </td>
-                                    <td> <input class='register-field' type="text" placeholder="Enter Street Type" name="street-type" required> </td>
+                                    <td> <input class='register-field' type="text" placeholder="Enter Street Type" name="streettype" required> </td>
                                 </tr>
                                 <tr>
                                     <td> <label for="suburb">Suburb</label> </td>
