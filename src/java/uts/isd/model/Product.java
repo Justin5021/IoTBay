@@ -35,6 +35,10 @@ public class Product implements Serializable{
         this.productBrand = productBrand;
         this.productImageURL = productImageURL;
     }
+
+    public Product(int id, int serialNum, int quantity, int supplierID, float price, String category, String brand, String image) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
     public int getProductID() {
         return productID;

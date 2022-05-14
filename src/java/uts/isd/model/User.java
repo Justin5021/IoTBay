@@ -145,4 +145,15 @@ public class User implements Serializable {
     public void setCountry(String country) {
         this.country = country;
     }
+    
+    public char getAccountType() {
+        return this.getClass().getSimpleName().charAt(0);
+    }
+
+    public boolean isStaff() {
+        return getAccountType() == 'S';
+    }
+    public boolean isCustomer() {
+        return getAccountType() == 'C';
+    }
 }

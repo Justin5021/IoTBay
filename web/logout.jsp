@@ -1,7 +1,7 @@
 <%-- 
     Document   : logout
     Created on : 2022年3月23日, 上午5:31:42
-    Author     : roddi, Jingxuan Liu
+    Author     : pei-han lee 14200099, Jingxuan Liu
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
