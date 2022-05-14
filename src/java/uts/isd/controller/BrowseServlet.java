@@ -23,9 +23,6 @@ import uts.isd.model.dao.ProductDBManager;
  * @author Jacky Bahary 13997263
  */
 public class BrowseServlet extends HttpServlet {
-//    ArrayList<Product> productList;
-//    HttpSession session;
-//    ProductDBManager productDBManager;
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
