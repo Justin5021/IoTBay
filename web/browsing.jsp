@@ -69,6 +69,9 @@
                 </div>        
             <% } %>
             </div>
+            <div>
+                <a href="addToCart.jsp"><button type="submit" class="btn add">Add to Cart</button></a>
+            </div>
         </div>
     </body>
 </html>
