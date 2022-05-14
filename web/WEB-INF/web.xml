@@ -45,6 +45,10 @@
         <servlet-name>AddSupplierServlet</servlet-name>
         <servlet-class>uts.isd.controller.AddSupplierServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>addCartServlet</servlet-name>
+        <servlet-class>uts.isd.controller.addCartServlet</servlet-class>
+    </servlet>
     
     
     <!--Servlet Mapping-->
@@ -85,12 +89,17 @@
         <url-pattern>/StaffRegisterServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+<<<<<<< Updated upstream
         <servlet-name>SupplierServlet</servlet-name>
         <url-pattern>/SupplierServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>AddSupplierServlet</servlet-name>
         <url-pattern>/AddSupplierServlet</url-pattern>
+=======
+        <servlet-name>addCartServlet</servlet-name>
+        <url-pattern>/addCartServlet</url-pattern>
+>>>>>>> Stashed changes
     </servlet-mapping>
     
     <session-config>
