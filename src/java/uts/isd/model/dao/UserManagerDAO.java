@@ -155,7 +155,7 @@ public class UserManagerDAO {
     }
 
     public int getUserID(String email, String password) throws SQLException {
-        String fetch = "SELECT UserID, Email, Pass FROM IOTBAY.Users WHERE Email = '" + email + "' AND Pass = '" + password + "'";
+        String fetch = "SELECT * FROM IOTBAY.Users WHERE Email = '" + email + "' AND Pass = '" + password + "'";
         ResultSet rs = st.executeQuery(fetch);
 
         while (rs.next()) {
@@ -187,20 +187,20 @@ public class UserManagerDAO {
     // Adds Registered Log
     public void addRegisterLog(int userID) throws SQLException {
         String registered = "Registered";
-        String fetch = "INSERT INTO IOTBAY.ACCLOGS (USERID, STATUS ,CurrentTime) VALUES (" + userID + ",'" + registered + "',CURRENT_TIMESTAMP)";
+        String fetch = "INSERT INTO IOTBAY.UserLogs (USERID, STATUS ,CurrentTime) VALUES (" + userID + ",'" + registered + "',CURRENT_TIMESTAMP)";
         st.executeUpdate(fetch);
     }
 
     public void addLogoutLog(int userID) throws SQLException {
         String loggedOut = "Logged Out";
-        String fetch = "INSERT INTO IOTBAY.ACCLOGS (USERID, STATUS ,CurrentTime) VALUES (" + userID + ",'" + loggedOut + "',CURRENT_TIMESTAMP)";
+        String fetch = "INSERT INTO IOTBAY.UserLogs (USERID, STATUS ,CurrentTime) VALUES (" + userID + ",'" + loggedOut + "',CURRENT_TIMESTAMP)";
         st.executeUpdate(fetch);
     }
 
     //adds a loging log to the account log table when signing in
     public void addLoginLog(int userID) throws SQLException {
         String loggedIn = "Logged In";
-        String fetch = "INSERT INTO IOTBAY.ACCLOGS (USERID, STATUS ,CurrentTime) VALUES (" + userID + ",'" + loggedIn + "',CURRENT_TIMESTAMP)";
+        String fetch = "INSERT INTO IOTBAY.UserLogs (USERID, STATUS ,CurrentTime) VALUES (" + userID + ",'" + loggedIn + "',CURRENT_TIMESTAMP)";
         st.executeUpdate(fetch);
     }
 
@@ -209,7 +209,7 @@ public class UserManagerDAO {
 
         ArrayList loglist = new ArrayList();
 
-        String fetch = "select * from IOTBAY.ACCLOGS where USERID =" + userID;
+        String fetch = "SELECT * FROM IOTBAY.UserLogs WHERE UserID =" + userID;
         ResultSet rs = st.executeQuery(fetch);
 
         while (rs.next()) {
@@ -226,7 +226,7 @@ public class UserManagerDAO {
 
         ArrayList loglist = new ArrayList();
 
-        String fetch = "select * from IOTBAY.ACCLOGS where USERID =" + userID;
+        String fetch = "SELECT * FROM IOTBAY.UserLogs WHERE UserID =" + userID;
         ResultSet rs = st.executeQuery(fetch);
 
         while (rs.next()) {
