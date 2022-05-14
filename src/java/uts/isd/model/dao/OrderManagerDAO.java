@@ -11,19 +11,31 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 /**
  *
  * @author Jacky Bahary 13997263
  */
 public class OrderManagerDAO {
-    private final Statement st; //used to execute SQL queries within java code
-    private Connection conn;
+    private Statement st;
     
     public OrderManagerDAO(Connection conn) throws SQLException {
         st = conn.createStatement();
-        this.conn = conn;
     }
+    
+    //finds order using orderID and userID
+    public Orders findOrder(int orderID, int userID) throws SQLException {
+        String fetch = "SELECT * FROM IOTBAY.ORDERS WHERE ORDERID = " + orderID + " and USERID='" + userID + "'";
+        ResultSet rs = st.executeQuery(fetch);
+        while (rs.next()) {
+            String ORDERID = rs.getString(1); 
+            String USERID = rs.getString(2);
+            int PRODUCTID = rs.getInt(3);
+        }
+        return null;
+    }
+    
     
 //    //add order to assigned USER
 //    public int addOrder(Orders order) throws SQLException {
@@ -41,4 +53,14 @@ public class OrderManagerDAO {
 //        
 //
 //    }
-}
+    //fetching order using UserID
+    public ArrayList<Orders> fetchOrders(int userID) throws SQLException {
+        ArrayList<Orders> list = new ArrayList<>();
+        
+        String fetch = "SELECT * FROM IOTBAY.ORDERS WHERE ORDERID =";
+        ResultSet rs = st.executeQuery(fetch);
+        
+        return null;
+        
+    }
+ }
