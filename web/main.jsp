@@ -6,6 +6,7 @@
 
 <%@page import="uts.isd.model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<jsp:include page="/ConnServlet"/>
 <!DOCTYPE html>
 <html>
     <head>
@@ -51,7 +52,7 @@
             <h3> What would you like to do? </h3>
             <div class="btn-container text-center">
                 <div class="btn-container-item" style="padding: 0.75rem">
-                    <a href="browsing.jsp">
+                    <a href="BrowseServlet">
                         <button class="shop-btn btn btn-outline-secondary btn-lg">
                             <i class="fas fa-shopping-cart"></i> Shop
                         </button>

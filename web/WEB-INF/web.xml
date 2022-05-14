@@ -21,6 +21,10 @@
         <servlet-name>StaffLogoutServlet</servlet-name>
         <servlet-class>uts.isd.controller.StaffLogoutServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BrowseServlet</servlet-name>
+        <servlet-class>uts.isd.controller.BrowseServlet</servlet-class>
+    </servlet>
     
     
     <servlet-mapping>
@@ -42,6 +46,10 @@
     <servlet-mapping>
         <servlet-name>StaffLogoutServlet</servlet-name>
         <url-pattern>/StaffLogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BrowseServlet</servlet-name>
+        <url-pattern>/BrowseServlet</url-pattern>
     </servlet-mapping>
 
     <session-config>

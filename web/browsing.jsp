@@ -5,6 +5,10 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="uts.isd.model.Product" %>
+<%@page import="java.util.ArrayList" %>
+<%@page import="java.text.DecimalFormat"%>
+<jsp:include page="/ConnServlet"/>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,6 +20,10 @@
         <title> Browse </title>
     </head>
     <body>
+        <%
+            ArrayList<Product> products = (ArrayList<Product>)session.getAttribute("products");
+            DecimalFormat priceFormat = new DecimalFormat("$#0.00");
+        %>
         <nav class="navbar navbar-expand-md navbar-dark bg-primary">
             <div class="container">
                 <a href="index.jsp" class="navbar-brand"> <h1> IoTBay </h1> </a>
@@ -45,7 +53,7 @@
         <div class="container text-center pt-4">
             <h2 class="title">Products</h2>
 
-            <!--first row-->
+<!--            first row
             <div class="row">
                 <div class="col">
                     <div class="image">
@@ -108,7 +116,7 @@
                 </div>
             </div>
 
-            <!--Second Row-->
+            Second Row
             <div class="row">
                 <div class="col">
                     <div class="image">
@@ -169,6 +177,23 @@
                         <a href="#"><button>add to cart</button></a>
                     </div>
                 </div>
+            </div>-->
+            <div class="row text-center">   
+            <% for (Product product: products){ %>
+                <div class="col-xl-3 col-md-4 col-sm-6 mb-4"> 
+                    <div class="card h-100 box-shadow">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= product.getProductName()%></h5>
+                            <p class="card-text">Price: <%= priceFormat.format(product.getProductPrice())%></p>
+                            <% if (product.getProductQuantity()> 0) { %>
+                                <p class="card-text">Quantity: <%= product.getProductQuantity()%></p>
+                            <% } else { %>
+                                <p class="card-text">Quantity: Out of Stock</p>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>        
+            <% } %>
             </div>
         </div>
     </body>

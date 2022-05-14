@@ -60,7 +60,7 @@
                     </a> 
                 </div>
                 <div class="btn-container-item" style="padding: 0.75rem">
-                    <a href="browsing.jsp">
+                    <a href="BrowseServlet">
                         <button class="btn btn-outline-secondary btn-lg">
                             <i class="fas fa-search"></i> Catalogue Browse
                         </button>

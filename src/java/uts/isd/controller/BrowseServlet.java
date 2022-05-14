@@ -46,12 +46,14 @@ public class BrowseServlet extends HttpServlet {
             if (!productList.isEmpty()) {
                 session.setAttribute("products", productList);
             }
-        } catch (SQLException ex) {           
+        } 
+        catch (SQLException ex) {           
             Logger.getLogger(BrowseServlet.class.getName()).log(Level.SEVERE, null, ex);  
-        } finally {
+        } 
+        finally {
             //anything that happens will eventually show browsing page
             request.getRequestDispatcher("browsing.jsp").include(request, response);
-            session.setAttribute("productErr", null);
+            //session.setAttribute("productErr", null);
         }
         
     }
