@@ -8,7 +8,6 @@
 <%@page import="uts.isd.model.Product" %>
 <%@page import="java.util.ArrayList" %>
 <%@page import="java.text.DecimalFormat"%>
-<jsp:include page="/ConnServlet"/>
 <!DOCTYPE html>
 <html>
     <head>
