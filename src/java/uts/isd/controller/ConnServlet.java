@@ -18,6 +18,7 @@ public class ConnServlet extends HttpServlet {
     private UserManagerDAO userManager;
     private OrderManagerDAO orderManager;
     private ProductDBManager productManager;
+    private SupplierDBManager supplierManager;
 
     @Override //Create and instance of DBConnector for the deployment session
     public void init() {
@@ -39,6 +40,7 @@ public class ConnServlet extends HttpServlet {
             userManager = new UserManagerDAO(conn);
             orderManager = new OrderManagerDAO(conn);
             productManager = new ProductDBManager(conn);
+            supplierManager = new SupplierDBManager(conn);
         } catch (SQLException ex){
             Logger.getLogger(ConnServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -47,6 +49,7 @@ public class ConnServlet extends HttpServlet {
         session.setAttribute("userManager", userManager);
         session.setAttribute("orderManager", orderManager);
         session.setAttribute("productManager", productManager);
+        session.setAttribute("supplierManager", supplierManager);
     }
 
     @Override //Destroy the servlet and release the resources of the application (terminate also the db connection)
