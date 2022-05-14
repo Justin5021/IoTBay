@@ -47,7 +47,6 @@
         </nav>
         
         <% 
-            Staff staff = (Staff)session.getAttribute("staff");
             String firstName = request.getParameter("fname");
             String lastName = request.getParameter("lname");
             String email = request.getParameter("email");

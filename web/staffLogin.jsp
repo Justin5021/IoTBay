@@ -41,11 +41,17 @@
                 </div>
             </div>
         </nav>
+        <% 
+            String existErr = (String) session.getAttribute("existErr");
+            String emailErr = (String) session.getAttribute("emailErr");
+            String passErr = (String) session.getAttribute("passErr");
+        %>
         <div class="container" style="margin-top: 10%">
             <div class ="login-container text-center">
                 <div class =" login-item">
                     <h1 class="login-title"><strong>Staff Login</strong></h1>
                 </div>
+                <span> <%=(existErr != null ? existErr: "")%> </span>
                 <form action="StaffLoginServlet" method ="POST">
                     <div class ="login-item row justify-content-center">
                         <table class ="login-table table table-responsive" style="width: auto;">
@@ -54,7 +60,7 @@
                                     <label class="login-text" for="email">Email:</label>
                                 </td>
                                 <td>
-                                    <input class="login-field" type="text" id="email" name="email">
+                                    <input class="login-field" type="text" id="email" name="email" placeholder="<%=(emailErr != null ? emailErr : "Enter Email") %>">
                                 </td>
                             </tr>
                             <tr>
@@ -62,7 +68,7 @@
                                     <label class="login-text" for="pass">Password:</label>
                                 </td>
                                 <td>
-                                    <input class="login-field" type="password" id="pass" name="pass">
+                                    <input class="login-field" type="password" id="pass" name="pass" placeholder="<%=(passErr != null ? passErr : "Enter Password") %>">
                                 </td>
                             </tr>    
                         </table>

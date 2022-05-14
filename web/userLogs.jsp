@@ -1,11 +1,13 @@
 <%-- 
-    Document   : welcome
-    Created on : Mar 29, 2022, 10:44:35 PM
-    Author     : Justin
+    Document   : userLogs
+    Created on : May 11, 2022, 4:41:07 AM
+    Author     : Justin 13595766
 --%>
 
-<%@page import="uts.isd.model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="uts.isd.model.User"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Iterator"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,9 +16,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Welcome </title>
+        <title> Logs </title>
     </head>
     <body>
+        <%
+            ArrayList<User> users = (ArrayList<User>)session.getAttribute("user");
+        %>
         <nav class="navbar navbar-expand-md navbar-dark bg-primary">
             <div class="container">
                 <a href="index.jsp" class="navbar-brand"> <h1> IoTBay </h1> </a>
@@ -30,9 +35,6 @@
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="main.jsp" class="nav-link"> Dashboard </a>
-                        </li>
-                        <li class="nav-item">
                             <a href="about.jsp" class="nav-link"> About </a>
                         </li>
                         <li class="nav-item">
@@ -45,26 +47,33 @@
                 </div>
             </div>
         </nav>
-        
-        <% 
-            String firstName = request.getParameter("fname");
-            String lastName = request.getParameter("lname");
-            String email = request.getParameter("email");
-            String phoneNumber = request.getParameter("phonenum");
+        <%
+            ArrayList logs = (ArrayList) session.getAttribute("logs");
+            ArrayList tlogs = (ArrayList) session.getAttribute("tlogs");
         %>
-        
-        <div class="container text-center"  style="margin-top: 1cm">
-            <h1> Welcome <%= firstName + " " + lastName %>! </h1>
-            <p>Your email is <%=email%></p>
-            <p>Your phone number is <%=phoneNumber%></p>
-            <br />
-            <p> Please click on this button below to visit your dashboard </p>
-            <form action="main.jsp" method="POST">
-                <button class="btn btn-primary btn-lg" type="submit"> 
-                    <i class="fa fa-home" aria-hidden="true"></i>
-                    Dashboard
-                </button> 
-            </form>
+        <div class="container my-3">
+            <table class="table table-sm table-bordered">
+                <p class="display-6"> Account History Logs </p>
+                <thead>
+                    <tr>
+                        <th scope="col">Status</th>
+                        <th scope="col">Date and Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%
+                        for (int i = 0; i < logs.size(); i++) {
+                    %>
+                    <tr>
+                        <td><%= logs.get(i)%></td>
+                        <td> <%= tlogs.get(i)%></td>
+
+                    </tr>
+                    <%
+                        }
+                    %>
+            </table>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>

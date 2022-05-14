@@ -41,35 +41,47 @@
                 </div>
             </div>
         </nav>
+        <% 
+            String matchErr = (String) session.getAttribute("matchErr");
+            String existErr = (String) session.getAttribute("existErr");
+            String fnameErr = (String) session.getAttribute("fnameErr");
+            String lnameErr = (String) session.getAttribute("lnameErr");
+            String emailErr = (String) session.getAttribute("emailErr");
+            String passErr = (String) session.getAttribute("passErr");
+            String phoneErr = (String) session.getAttribute("phoneErr");
+            String streetNumErr = (String) session.getAttribute("streetNumErr");
+            String postcodeErr = (String) session.getAttribute("postcodeErr");
+        %>
         <div class="container text-center">
-            <form class="register-form" action="welcome.jsp" method="POST">
+            <form class="register-form" action="RegisterServlet" method="POST">
                 
                 <div class='register-container'>
                     <div class='register-item' style="margin: 1cm">
                          <h1 class="register-title"><strong>Sign Up Here!</strong></h1>
                     </div>
+                    <span> <%=(existErr != null ? existErr: "")%> </span>
                     <div class='register-item row justify-content-center'>
                         <table class="register-table table table-responsive" style="width: auto;">
                             <tbody>
                                 <tr>
                                     <td> <label for="fname">First Name</label> </td>
-                                    <td> <input class='register-field' type="text" placeholder="Enter First Name" name="fname" required> </td>
+                                    <td> <input class='register-field' type="text" placeholder="<%=(fnameErr != null ? fnameErr : "Enter First Name")%>" name="fname" required> </td>
                                 </tr>
                                 <tr>
                                     <td> <label for="lname">Last Name</label> </td>
-                                    <td> <input class='register-field' type="text" placeholder="Enter Last Name" name="lname" required> </td>
+                                    <td> <input class='register-field' type="text" placeholder="<%=(lnameErr != null ? lnameErr : "Enter Last Name")%>" name="lname" required> </td>
                                 </tr>
                                 <tr>
                                     <td> <label for="email">Email</label> </td>
-                                    <td> <input class='register-field' type="email" placeholder="Enter Email Address" name="email" required> </td>
+                                    <td> <input class='register-field' type="email" placeholder="<%=(emailErr != null ? emailErr : "Enter Last Name")%>" name="email" required> </td>
                                 </tr>
                                 <tr>
                                     <td> <label for="phonenum">Phone Number</label> </td>
-                                    <td> <input class='register-field' type="text" placeholder="Enter Phone Number" name="phonenum" required> </td>
+                                    <td> <input class='register-field' type="text" placeholder="<%=(phoneErr != null ? phoneErr : "Enter Phone Number")%>" name="phonenum" required> </td>
                                 </tr>
                                 <tr>
                                     <td> <label for="street-number">Street Number</label> </td>
-                                    <td> <input class='register-field' type="text" placeholder="Enter Street Number" name="streetnum" required> </td>
+                                    <td> <input class='register-field' type="text" placeholder="<%=(streetNumErr != null ? streetNumErr : "Enter Street Number")%>" name="streetnum" required> </td>
                                 </tr>
                                 <tr>
                                     <td> <label for="street-name">Street Name</label> </td>
@@ -89,7 +101,7 @@
                                 </tr>
                                 <tr>
                                     <td> <label for="postcode">Postcode</label> </td>
-                                    <td> <input class='register-field' type="text" placeholder="Enter Postcode" name="postcode" required> </td>
+                                    <td> <input class='register-field' type="text" placeholder="<%=(postcodeErr != null ? postcodeErr : "Enter Postcode")%>" name="postcode" required> </td>
                                 </tr>
                                 <tr>
                                     <td> <label for="Country">Country</label></td>
@@ -97,12 +109,13 @@
                                 </tr>
                                 <tr>
                                     <td> <label for="psw">Password</label> </td>
-                                    <td> <input class='register-field' type="password" placeholder="Enter Your Password" name="pass" required> </td>
+                                    <td> <input class='register-field' type="password" placeholder="<%=(passErr != null ? passErr : "Enter Your Password")%>" name="pass" required> </td>
                                 </tr>
                                 <tr>
                                     <td> <label for="psw">Confirm Password</label> </td>
                                     <td> <input class='register-field' type="password" placeholder="Confirm Password" name="cpass" required> </td>
                                 </tr>
+                                <span> <%=(matchErr != null ? matchErr: "")%> </span>
                             </tbody>
                         </table>
                     </div>

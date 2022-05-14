@@ -49,6 +49,10 @@
         <servlet-name>addCartServlet</servlet-name>
         <servlet-class>uts.isd.controller.addCartServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AccLogsServlet</servlet-name>
+        <servlet-class>uts.isd.controller.AccLogsServlet</servlet-class>
+    </servlet>
     
     
     <!--Servlet Mapping-->
@@ -99,6 +103,10 @@
     <servlet-mapping>
         <servlet-name>addCartServlet</servlet-name>
         <url-pattern>/addCartServlet</url-pattern>
+    </servlet>
+    <servlet>
+        <servlet-name>AccLogsServlet</servlet-name>
+        <url-pattern>/AccLogsServlet</url-pattern>
     </servlet-mapping>
     
     <session-config>

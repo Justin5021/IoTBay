@@ -45,19 +45,36 @@ public class StaffDAO {
         return null;
     }
 
+    public void addStaff(String firstName, String lastName, String email, String pass, String phoneNum, String country) throws SQLException{
+        String query = 
+                "INSERT INTO IOTBAY.STAFF(STAFFFIRSTNAME, STAFFLASTNAME, STAFFEMAIL, STAFFPASS, STAFFPHONE, STAFFCOUNTRY) " +
+                "VALUES('" + firstName + "', '" + lastName + "', '" + email + "', '" + pass + "', '" + phoneNum + "', " + country + ")";
+        st.execute(query);
+    }
+
     public int getStaffID(String email, String password) throws SQLException {
         String fetch = "SELECT * FROM IOTBAY.Staff WHERE StaffEmail = '" + email + "' AND StaffPass = '" + password + "'";
         ResultSet rs = st.executeQuery(fetch);
-
         while (rs.next()) {
             int staffID = rs.getInt(1);
             String emails = rs.getString(4);
             String passwords = rs.getString(5);
-
             if ((password.equals(passwords)) && email.equals(emails)) {
                 return staffID;
             }
         }
         return 0;
+    }
+
+    public boolean checkStaff(String email) throws SQLException {
+        String fetch = "SELECT * FROM IOTBAY.Users WHERE Email=" + email;
+        ResultSet rs = st.executeQuery(fetch);
+        while ( rs.next() ) {
+            String userEmail = rs.getString(4);
+            if ( userEmail.equals(email) ) {
+                return true;
+            }
+        }
+        return false;
     }
 }

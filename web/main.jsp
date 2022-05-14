@@ -65,6 +65,13 @@
                     <a/>
                 </div>
                 <div class="btn-container-item" style="padding: 0.75rem">
+                    <a href="AccLogsServlet">
+                        <button class="view-btn btn btn-outline-secondary btn-lg">
+                            <i class="fas fa-hourglass"></i> View Logs
+                        </button>
+                    <a/>
+                </div>
+                <div class="btn-container-item" style="padding: 0.75rem">
                     <a href="LogoutServlet">
                         <button class="view-btn btn btn-outline-secondary btn-lg">
                             <i class="fas fa-sign-out-alt" aria-hidden="true"></i> Logout

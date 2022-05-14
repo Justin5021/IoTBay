@@ -59,28 +59,25 @@ public class UserManagerDAO {
 
     // Add a new user into the Users table
     public void addUser(String firstName, String lastName, String email, String password,
-                        int phoneNumber, int streetNumber, String streetName, String streetType,
-                        String suburb, String state, int postcode, String country) throws SQLException {       
-        st.executeUpdate(
-                "INSERT INTO IOTBAY.Users VALUES (FIRSTNAME, LASTNAME, EMAIL, PASSWORD, PHONENUMBER,"
-                + " STREETNUMBER, STREETNAME, STREETTYPE, SUBURB, STATE, POSTCODE, COUNTRY) VALUES ("
-                + "'" + firstName + "'," + "'" + lastName + "'," + "'" + email + "',"
-                + "'" + password + "'," + "" + phoneNumber + "," + "" + streetNumber + "," + "'" + streetName + "',"
-                + "'" + streetType + "'," + "'" + suburb + "'," + "'" + state + "'," + "" + postcode + ","
-                + "'" + country + "'"
-                + ")");
+                        String phoneNumber, String streetNumber, String streetName, String streetType,
+                        String suburb, String state, String postcode, String country) throws SQLException {       
+        String fetch = "INSERT INTO IOTBAY.USERS (FIRSTNAME, LASTNAME, EMAIL, PASS, PHONENUMBER, STREETNUMBER, STREETNAME, STREETTYPE, SUBURB, STATE, POSTCODE, COUNTRY)"
+                    + "VALUES (" + firstName + ",'" + lastName + "', '" + email + "', '" + password + "', '" 
+                    + phoneNumber + "', '" + streetNumber + "', '" + streetName + "', '" + streetType + "', '" 
+                    + suburb + "', '" + state + "', '" + postcode + "', '" + country + "')";
+        st.execute(fetch);
     }
 
     // Update a users details into the database   
     public void updateUser(int Id, String firstName, String lastName, String email, String password,
-            int phoneNumber, int streetNumber, String streetName, String streetType,
-            String suburb, String state, int postcode, String country) throws SQLException {
+            String phoneNumber, String streetNumber, String streetName, String streetType,
+            String suburb, String state, String postcode, String country) throws SQLException {
 
         String fetch = "UPDATE IOTBAY.Users "
                 + "SET FIRSTNAME=" + "'" + firstName + "',"
                 + "LASTNAME=" + "'" + lastName + "',"
                 + "EMAIL=" + "'" + email + "',"
-                + "PASSWORD=" + "'" + password + "',"
+                + "PASS=" + "'" + password + "',"
                 + "PHONENUMBER=" + "" + phoneNumber + ","
                 + "STREETNUMBER=" + "" + streetNumber + ","
                 + "STREETNAME=" + "'" + streetName + "',"
@@ -169,13 +166,12 @@ public class UserManagerDAO {
         return 0;
     }
 
-    public boolean checkUser(String email, String password) throws SQLException {
-        String fetch = "SELECT * FROM IOTBAY.Users WHERE Email= '" + email + "' and Pass='" + password + "' ";
+    public boolean checkUser(String email) throws SQLException {
+        String fetch = "SELECT * FROM IOTBAY.Users WHERE Email=" + email;
         ResultSet rs = st.executeQuery(fetch);
         while ( rs.next() ) {
-            String userEmail = rs.getString(4); 
-            String userPass = rs.getString(5);
-            if ( userEmail.equals(email) && userPass.equals(password) ) {
+            String userEmail = rs.getString(4);
+            if ( userEmail.equals(email) ) {
                 return true;
             }
         }
@@ -203,39 +199,26 @@ public class UserManagerDAO {
         st.execute(fetch);
     }
 
-    //returns an Array list of the account logs related to the userID
-    public ArrayList getLogs(int userID) throws SQLException {
-
-        ArrayList loglist = new ArrayList();
-
+    // Returns Status Logs Depending on User ID
+    public ArrayList getStatusLogs(int userID) throws SQLException {
+        ArrayList statuslist = new ArrayList();
         String fetch = "SELECT * FROM IOTBAY.UserLogs WHERE UserID =" + userID;
         ResultSet rs = st.executeQuery(fetch);
-
         while (rs.next()) {
-            String action = rs.getString(2);
-
-            loglist.add(action);
-
+            String status = rs.getString(2);
+            statuslist.add(status);
         }
-
-        return loglist;
+        return statuslist;
     }
-    //returns account log times in the account log table related to userID
-    public ArrayList getTLogs(int userID) throws SQLException {
-
-        ArrayList loglist = new ArrayList();
-
+    // Returns Time Logs Depending on User ID
+    public ArrayList getTimeLogs(int userID) throws SQLException {
+        ArrayList timelist = new ArrayList();
         String fetch = "SELECT * FROM IOTBAY.UserLogs WHERE UserID =" + userID;
         ResultSet rs = st.executeQuery(fetch);
-
         while (rs.next()) {
-
             String timedate = rs.getString(3);
-
-            loglist.add(timedate);
-
+            timelist.add(timedate);
         }
-
-        return loglist;
+        return timelist;
     }
 }
