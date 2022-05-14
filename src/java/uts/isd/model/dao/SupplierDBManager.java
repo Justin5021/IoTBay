@@ -68,7 +68,7 @@ public class SupplierDBManager {
 
 
     //Delete
-    public void deleteSupplier(int id) throws SQLException {
+    public void deleteSupplier(String id) throws SQLException {
         st.executeUpdate("DELETE FROM IOTBAY.SUPPLIER WHERE SUPPLIERID=" + id);
     }
 
@@ -89,5 +89,14 @@ public class SupplierDBManager {
         }
         return suppliers;
     }
+
+    public Supplier findSupplierPK(String supplierEmail) {
+        throw new UnsupportedOperationException("Exist"); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void addSupplier(String SupplierID, String supplierAddress, String supplierPhone, String supplierEmail, String supplierName) {
+        throw new UnsupportedOperationException("gggg"); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 
 }
