@@ -1,10 +1,9 @@
 <%-- 
-    Document   : staffWelcome
-    Created on : Apr 1, 2022, 5:00:06 AM
-    Author     : Justin
+    Document   : staffLogin
+    Created on : May 14, 2022, 12:59:12 PM
+    Author     : Justin 13595766
 --%>
 
-<%@page import="uts.isd.model.Staff"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,7 +13,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Welcome </title>
+        <title> Main </title>
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-primary">
@@ -30,9 +29,6 @@
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="main.jsp" class="nav-link"> Dashboard </a>
-                        </li>
-                        <li class="nav-item">
                             <a href="about.jsp" class="nav-link"> About </a>
                         </li>
                         <li class="nav-item">
@@ -45,27 +41,37 @@
                 </div>
             </div>
         </nav>
-        
-        <% 
-            Staff staff = (Staff)session.getAttribute("staff");
-            String firstName = request.getParameter("fname");
-            String lastName = request.getParameter("lname");
-            String email = request.getParameter("email");
-            String phoneNumber = request.getParameter("phonenum");
-        %>
-        
-        <div class="container text-center"  style="margin-top: 1cm">
-            <h1> Welcome <%= firstName + " " + lastName %>! </h1>
-            <p>Your email is <%=email%></p>
-            <p>Your phone number is <%=phoneNumber%></p>
-            <br />
-            <p> Please click on this button below to visit your dashboard </p>
-            <form action="staffMain.jsp" method="POST">
-                <button class="btn btn-primary btn-lg" type="submit"> 
-                    <i class="fa fa-home" aria-hidden="true"></i>
-                    Dashboard
-                </button> 
-            </form>
+        <div class="container" style="margin-top: 10%">
+            <div class ="login-container text-center">
+                <div class =" login-item">
+                    <h1 class="login-title"><strong>Staff Login</strong></h1>
+                </div>
+                <form action="StaffLoginServlet" method ="POST">
+                    <div class ="login-item row justify-content-center">
+                        <table class ="login-table table table-responsive" style="width: auto;">
+                            <tr>
+                                <td>
+                                    <label class="login-text" for="email">Email:</label>
+                                </td>
+                                <td>
+                                    <input class="login-field" type="text" id="email" name="email">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="login-text" for="pass">Password:</label>
+                                </td>
+                                <td>
+                                    <input class="login-field" type="password" id="pass" name="pass">
+                                </td>
+                            </tr>    
+                        </table>
+                        <div>
+                            <button type="submit" class="btn login">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </body>
 </html>

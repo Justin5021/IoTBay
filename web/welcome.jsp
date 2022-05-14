@@ -48,19 +48,10 @@
         
         <% 
             User user = (User)session.getAttribute("user");
-            int userID = user.getUserID();
             String firstName = request.getParameter("fname");
             String lastName = request.getParameter("lname");
             String email = request.getParameter("email");
-            String password = request.getParameter("pass");
             String phoneNumber = request.getParameter("phonenum");
-            String streetNumber = request.getParameter("street-number");
-            String streetName = request.getParameter("street-name");
-            String streetType = request.getParameter("street-type");
-            String suburb = request.getParameter("suburb");
-            String state = request.getParameter("state");
-            String postcode = request.getParameter("postcode");
-            String country = request.getParameter("country");
         %>
         
         <div class="container text-center"  style="margin-top: 1cm">

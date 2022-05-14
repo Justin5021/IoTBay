@@ -44,10 +44,10 @@
         <div class="container" style="margin-top: 10%">
             <div class ="login-container text-center">
                 <div class =" login-item">
-                    <h1 class="login-title"><strong>Login</strong></h1>
+                    <h1 class="login-title"><strong>Customer Login</strong></h1>
                 </div>
-                <div class ="login-item row justify-content-center">
-                    <form class="login-table" action="LoginServlet" method ="POST">
+                <form action="LoginServlet" method ="POST">
+                    <div class ="login-item row justify-content-center">
                         <table class ="login-table table table-responsive" style="width: auto;">
                             <tr>
                                 <td>
@@ -69,8 +69,8 @@
                         <div>
                             <button type="submit" class="btn login">Login</button>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </body>

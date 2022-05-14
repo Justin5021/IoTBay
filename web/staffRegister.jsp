@@ -94,7 +94,7 @@
                     </div> 
                     
                     <div class='register-item'>
-                        <p class='register-txt'> <p>Already have an account? <a href="login.jsp"><strong>Sign in</strong></a>.</p> </p>
+                        <p class='register-txt'> <p>Already have an account? <a href="staffLogin.jsp"><strong>Sign in</strong></a>.</p> </p>
                     </div>
                 </div>
             </form>
