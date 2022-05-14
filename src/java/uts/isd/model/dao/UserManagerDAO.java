@@ -188,20 +188,20 @@ public class UserManagerDAO {
     public void addRegisterLog(int userID) throws SQLException {
         String registered = "Registered";
         String fetch = "INSERT INTO IOTBAY.UserLogs (USERID, STATUS ,CurrentTime) VALUES (" + userID + ",'" + registered + "',CURRENT_TIMESTAMP)";
-        st.executeUpdate(fetch);
+        st.execute(fetch);
     }
 
     public void addLogoutLog(int userID) throws SQLException {
         String loggedOut = "Logged Out";
         String fetch = "INSERT INTO IOTBAY.UserLogs (USERID, STATUS ,CurrentTime) VALUES (" + userID + ",'" + loggedOut + "',CURRENT_TIMESTAMP)";
-        st.executeUpdate(fetch);
+        st.execute(fetch);
     }
 
     //adds a loging log to the account log table when signing in
     public void addLoginLog(int userID) throws SQLException {
         String loggedIn = "Logged In";
         String fetch = "INSERT INTO IOTBAY.UserLogs (USERID, STATUS ,CurrentTime) VALUES (" + userID + ",'" + loggedIn + "',CURRENT_TIMESTAMP)";
-        st.executeUpdate(fetch);
+        st.execute(fetch);
     }
 
     //returns an Array list of the account logs related to the userID
