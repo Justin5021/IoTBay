@@ -113,6 +113,5 @@ CREATE TABLE UserLogs (
     UserID INT,
     STATUS VARCHAR(15),
     CurrentTime TimeStamp,
-    PRIMARY KEY (UserID),
     FOREIGN KEY (UserID) REFERENCES Users(UserID)
 );
