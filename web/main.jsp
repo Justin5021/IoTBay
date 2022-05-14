@@ -5,8 +5,7 @@
 --%>
 
 <%@page import="uts.isd.model.User"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:include page="/ConnServlet"/>
+<%@page contentType="text/html" pageEncoding="UTF-8"%> 
 <!DOCTYPE html>
 <html>
     <head>
