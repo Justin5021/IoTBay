@@ -16,17 +16,28 @@ public class Supplier implements Serializable{
     
     public Supplier(
             int supplierID,
+            String supplierName,
             String supplierAddress,
             String supplierPhone,
-            String supplierName,
             String supplierEmail){
         this.supplierID = supplierID;
+        this.supplierName = supplierName;
+        this.supplierAddress = supplierAddress;
+        this.supplierPhone = supplierPhone;
+        this.supplierEmail = supplierEmail;
+    }
+    
+    public Supplier(
+            String supplierName,
+            String supplierAddress,
+            String supplierPhone,
+            String supplierEmail){
         this.supplierAddress = supplierAddress;
         this.supplierPhone = supplierPhone;
         this.supplierName = supplierName;
         this.supplierEmail = supplierEmail;
     }
-    
+
     public int getSupplierID() {
         return supplierID;
     }

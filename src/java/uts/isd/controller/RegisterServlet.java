@@ -57,7 +57,7 @@
 //                        manager.addUser(firstName, lastName, email, password, phoneNumber, streetNumber, streetName, streetType, suburb, state, postcode, country, );
 //                        //getUserID
 //                        int userID = manager.getUserID(email, password);
-//                        User user = new User(userID, firstName, lastName, email, password, phoneNumber, streetNumber, streetName, streetType, suburb, state, postcode, country);
+//                        User user = new User(firstName, lastName, email, password, phoneNumber, streetNumber, streetName, streetType, suburb, state, postcode, country);
 //                        //manager.addCustomer(userID);
 //                        int userI = manager.getUserID(email, password);
 //                        manager.addCustomer(userI);

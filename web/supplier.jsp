@@ -53,13 +53,10 @@
             <div class ="container my-3">
             <div class ="table-responsive">
                 <table class="table table-sm table-bordered">
-                    <p class="display-6">Supplier List</p>
-                   
+                    <p class="display-6">Supplier List</p>               
                 <%
                     Supplier supplier = (Supplier) session.getAttribute("listout");
-                %>
-                
-                
+                %>      
                     <thead>
                         <tr>
                             <th scope="col">SupplierID</th>
@@ -68,27 +65,26 @@
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
                             <th scope="col">Add/Delete</th>
-
                         </tr>
                     </thead>
                     <tbody>
-
-                            <tr>
-                                <td>${listout.supplierID}</td>
-                                <td>${listout.supplierAddress}</td>
-                                <td>${listout.supplierPhone}</td>
-                                <td>${listout.supplierName}</td>
-                                <td>${listout.supplierEmail}</td>
-                                <td><a class="btn-info" href="AddSupplierServlet?id=<%=Supplier.getID()%>">add</a>&nbsp;
-                                    <a class="btn-danger" href="DeleteSupplierServlet?id=<%=Supplier.getID()%>">Delete</a>
-                                </td>
-                            </tr>
-
+                        <tr>
+                            <td>${listout.supplierID}</td>
+                            <td>${listout.supplierAddress}</td>
+                            <td>${listout.supplierPhone}</td>
+                            <td>${listout.supplierName}</td>
+                            <td>${listout.supplierEmail}</td>
+                            <td>
+                                <a class="btn-danger" href="DeleteSupplierServlet?id=<%=Supplier.getID()%>">Delete</a>
+                            </td>
+                        </tr>
                     </tbody>
 
-            </body>
-            
-            
+            <a href="addSupplier.jsp">
+                <button class="view-btn btn btn-outline-secondary btn-lg">
+                    <i class="fas fa-truck-moving"></i> Add Suppliers
+                </button>
+            <a/>
         </div>
     </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

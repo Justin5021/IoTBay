@@ -42,6 +42,33 @@ public class User implements Serializable {
         this.country = country;
     }
 
+    public User(
+            String firstName, 
+            String lastName, 
+            String email, 
+            String password, 
+            String phoneNumber, 
+            String streetNumber, 
+            String streetName, 
+            String streetType, 
+            String suburb, 
+            String state, 
+            String postcode, 
+            String country) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+        this.streetNumber = streetNumber;
+        this.streetName = streetName;
+        this.streetType = streetType;
+        this.suburb = suburb;
+        this.state = state;
+        this.postcode = postcode;
+        this.country = country;
+    }
+
     public int getUserID() {
         return userID;
     }

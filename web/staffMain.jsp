@@ -30,7 +30,7 @@
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="main.jsp" class="nav-link"> Dashboard </a>
+                            <a href="staffMain.jsp" class="nav-link"> Dashboard </a>
                         </li>
                         <li class="nav-item">
                             <a href="about.jsp" class="nav-link"> About </a>
@@ -68,7 +68,7 @@
                     <a/>
                 </div>
                 <div class="btn-container-item" style="padding: 0.75rem">
-                    <a href="#">
+                    <a href="SupplierServlet">
                         <button class="view-btn btn btn-outline-secondary btn-lg">
                             <i class="fas fa-truck-moving"></i> View Suppliers
                         </button>

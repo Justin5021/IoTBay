@@ -35,7 +35,15 @@
     </servlet>
     <servlet>
         <servlet-name>StaffRegisterServlet</servlet-name>
-        <servlet-class>uts.isd.controller.RegisterServlet</servlet-class>
+        <servlet-class>uts.isd.controller.StaffRegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SupplierServlet</servlet-name>
+        <servlet-class>uts.isd.controller.SupplierServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddSupplierServlet</servlet-name>
+        <servlet-class>uts.isd.controller.AddSupplierServlet</servlet-class>
     </servlet>
     
     
@@ -75,6 +83,14 @@
     <servlet-mapping>
         <servlet-name>StaffRegisterServlet</servlet-name>
         <url-pattern>/StaffRegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SupplierServlet</servlet-name>
+        <url-pattern>/SupplierServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddSupplierServlet</servlet-name>
+        <url-pattern>/AddSupplierServlet</url-pattern>
     </servlet-mapping>
     
     <session-config>

@@ -23,9 +23,9 @@ public class SupplierDBManager {
     }
 
     //Create
-    public void addSupplier(int ID, String address, String number, String name, String email ) throws SQLException {
-        st.executeUpdate("INSERT INTO IOTBAY.SUPPLIER (SUPPLIERID, SUPPLIERADDRESS, SUPPLIERPHONE, SUPPLIERNAME, SUPPLIEREMAIL) "
-                + "VALUES ('" + ID + "','" + address + "', " + number + ", '" + name + "' , '" + email + ")");
+    public void addSupplier(String address, String number, String name, String email ) throws SQLException {
+        st.executeUpdate("INSERT INTO IOTBAY.SUPPLIER (SUPPLIERADDRESS, SUPPLIERPHONE, SUPPLIERNAME, SUPPLIEREMAIL) "
+                + "VALUES ('" + address + "','" + number + "', " + name + ", '" + email + ")");
     }
 
     //Read
@@ -37,13 +37,36 @@ public class SupplierDBManager {
 
             if (ID.equals(supplierID)) {
                 int id = rs.getInt("SUPPLIERID");
+                String name = rs.getString("SUPPLIERNAME");
                 String address = rs.getString("SUPPLIERADDRESS");
                 String number  = rs.getString("SUPPLIERPHONE");
-                String name = rs.getString("SUPPLIERNAME");
                 String email = rs.getString("EMAIL");
 
 
-                return new Supplier(id, address, number, name, email);
+                return new Supplier(id, name, address, number, email);
+            }
+        }
+        return null;
+    }
+
+    public Supplier findSupplier(String email) throws SQLException {
+        String fetch = "SELECT * FROM IOTBAY.Supplier WHERE SupplierEmail=" + email;
+        ResultSet rs = st.executeQuery(fetch);
+        while (rs.next()) {
+            String supplierEmail = rs.getString(5); 
+            if ( supplierEmail.equals(email) ) {
+                int supplierID  = rs.getInt(1);
+                String supplierName  = rs.getString(2);
+                String supplierAddress  = rs.getString(3);
+                String supplierPhone  = rs.getString(4);
+                // Get the info from query, create a new data object                
+                return new Supplier(
+                    supplierID, 
+                    supplierName, 
+                    supplierAddress, 
+                    supplierPhone, 
+                    supplierEmail
+                );
             }
         }
         return null;
@@ -73,25 +96,32 @@ public class SupplierDBManager {
     }
 
     //Fetch all
-    public ArrayList<Supplier> fetchAll() throws SQLException {
-        String query = "select * from SUPPLIER";
+    public ArrayList<Supplier> listAllSuppliers() throws SQLException {
+        String query = "SELECT * FROM IOTBAY.SUPPLIER ORDER BY SupplierID";
         ResultSet rs = st.executeQuery(query);
         ArrayList<Supplier> suppliers = new ArrayList();
 
         while (rs.next()) {
-                int SupplierID = rs.getInt("SUPPLIERID");
-                String address = rs.getString("SUPPLIERADDRESS");
-                String number  = rs.getString("SUPPLIERPHONE");
-                String SupplierName = rs.getString("SUPPLIERNAME");
-                String email = rs.getString("EMAIL");
-
-            suppliers.add(new Supplier(SupplierID, address, number, SupplierName, email));
+            int supplierID = rs.getInt("SUPPLIERID");
+            String name = rs.getString("SUPPLIERNAME");
+            String address = rs.getString("SUPPLIERADDRESS");
+            String number  = rs.getString("SUPPLIERPHONE");
+            String email = rs.getString("SUPPLIEREMAIL");
+            suppliers.add(new Supplier(supplierID, name, address, number, email));
         }
         return suppliers;
     }
 
-    public Supplier findSupplierPK(String supplierEmail) {
-        throw new UnsupportedOperationException("Exist"); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public boolean findSupplierPK(String supplierEmail) throws SQLException {
+        String query = "SELECT * FROM IOTBAY.Supplier WHERE SupplierEmail="+ supplierEmail;
+        ResultSet rs = st.executeQuery(query);
+        while ( rs.next() ) {
+            String suppEmail = rs.getString(5);
+            if ( suppEmail.equals(supplierEmail) ) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void addSupplier(String SupplierID, String supplierAddress, String supplierPhone, String supplierEmail, String supplierName) {
