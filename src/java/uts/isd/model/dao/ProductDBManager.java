@@ -30,7 +30,7 @@ public class ProductDBManager {
             int productID = rs.getInt("PRODUCTID");
             int serialNum = rs.getInt("PRODUCTSERIALNUM");
             int quantity = rs.getInt("PRODUCTQUANTITY");
-            int supplierID = rs,getInt("SUPPLIERID");
+            int supplierID = rs.getInt("SUPPLIERID");
             float price = rs.getFloat("PRODUCTPRICE");
             String name = rs.getString("PRODUCTNAME");
             String category = rs.getString("PRODUCTCATEGORY");
@@ -62,7 +62,7 @@ public class ProductDBManager {
             int productID = rs.getInt("PRODUCTID");
             int serialNum = rs.getInt("PRODUCTSERIALNUM");
             int quantity = rs.getInt("PRODUCTQUANTITY");
-            int supplierID = rs,getInt("SUPPLIERID");
+            int supplierID = rs.getInt("SUPPLIERID");
             float price = rs.getFloat("PRODUCTPRICE");
             String name = rs.getString("PRODUCTNAME");
             String category = rs.getString("PRODUCTCATEGORY");
@@ -84,7 +84,7 @@ public class ProductDBManager {
             int productID = rs.getInt("PRODUCTID");
             int serialNum = rs.getInt("PRODUCTSERIALNUM");
             int quantity = rs.getInt("PRODUCTQUANTITY");
-            int supplierID = rs,getInt("SUPPLIERID");
+            int supplierID = rs.getInt("SUPPLIERID");
             float price = rs.getFloat("PRODUCTPRICE");
             String name = rs.getString("PRODUCTNAME");
             String category = rs.getString("PRODUCTCATEGORY");
@@ -106,7 +106,7 @@ public class ProductDBManager {
             int productID = rs.getInt("PRODUCTID");
             int serialNum = rs.getInt("PRODUCTSERIALNUM");
             int quantity = rs.getInt("PRODUCTQUANTITY");
-            int supplierID = rs,getInt("SUPPLIERID");
+            int supplierID = rs.getInt("SUPPLIERID");
             float price = rs.getFloat("PRODUCTPRICE");
             String name = rs.getString("PRODUCTNAME");
             String category = rs.getString("PRODUCTCATEGORY");
@@ -140,7 +140,7 @@ public class ProductDBManager {
             int productID = rs.getInt("PRODUCTID");
             int serialNum = rs.getInt("PRODUCTSERIALNUM");
             int quantity = rs.getInt("PRODUCTQUANTITY");
-            int supplierID = rs,getInt("SUPPLIERID");
+            int supplierID = rs.getInt("SUPPLIERID");
             float price = rs.getFloat("PRODUCTPRICE");
             String name = rs.getString("PRODUCTNAME");
             String category = rs.getString("PRODUCTCATEGORY");
