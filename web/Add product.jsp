@@ -73,8 +73,8 @@
                     </tbody>
                 </table>
             </div>
-            <div class="btn-container">
-                <button type="submit" class="add-product" >Add</button>
+            <div class="btn-container" style="margin-top: 0.5cm">
+                <button type="submit" class="add-product btn btn-outline-secondary btn-lg">Add</button>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
