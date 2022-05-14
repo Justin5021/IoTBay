@@ -21,7 +21,7 @@ public class LogoutServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        UserManagerDAO manager = (UserManagerDAO) session.getAttribute("manager");
+        UserManagerDAO manager = (UserManagerDAO) session.getAttribute("userManager");
         User user = (User) session.getAttribute("user");
         String email = user.getEmail();
         String password = user.getPassword();
