@@ -36,7 +36,7 @@ public class BrowseServlet extends HttpServlet {
         HttpSession session = request.getSession();
         
         //get product manager
-        ProductDBManager productDBManager = (ProductDBManager)session.getAttribute("productDBManager");
+        ProductDBManager productDBManager = (ProductDBManager)session.getAttribute("productManager");
         
 //        try { 
 //            // get all products and push it into product array variable
@@ -61,10 +61,10 @@ public class BrowseServlet extends HttpServlet {
                 session.setAttribute("products", productList);
                 request.getRequestDispatcher("browsing.jsp").include(request, response);
             }
-//            else {
-//                session.setAttribute("empty", "Empty List");
-//                request.getRequestDispatcher("main.jsp").include(request, response);
-//            }
+            else {
+                session.setAttribute("empty", "Empty List");
+                request.getRequestDispatcher("main.jsp").include(request, response);
+            }
             } 
           catch (SQLException | NullPointerException ex) {
                 //System.out.println(ex.getMessage() == null ? "Incorrect Email or Password" : "Welcome");
