@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author roddi
+ * @author roddi & jacky
  */
 public class ProductDBManager {
     private Statement st;

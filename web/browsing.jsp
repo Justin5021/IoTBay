@@ -41,19 +41,6 @@
                 </div>
             </div>
         </nav>
-        
-<!--        <div class="container">
-            <div>
-		<form class="navbar-form navbar-right">
-                    <div class="form-group">
-			<input  placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-		</form>
-            </div>
-	</div>
-        
-        <h1 class="heading">products</h1>-->
 
         <div class="container text-center pt-4">
             <h2 class="title">Products</h2>
