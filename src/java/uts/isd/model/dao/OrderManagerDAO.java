@@ -25,13 +25,18 @@ public class OrderManagerDAO {
     }
     
     //finds order using orderID and userID
-    public Orders findOrder(int orderID, int userID) throws SQLException {
-        String fetch = "SELECT * FROM IOTBAY.ORDERS WHERE ORDERID = " + orderID + " and USERID='" + userID + "'";
+    public Orders findOrder(int id) throws SQLException {
+        String fetch = "SELECT * FROM IOTBAY.ORDERS WHERE ORDERID= " + id;
         ResultSet rs = st.executeQuery(fetch);
+        
         while (rs.next()) {
-            String ORDERID = rs.getString(1); 
-            String USERID = rs.getString(2);
-            int PRODUCTID = rs.getInt(3);
+            int orderID = rs.getInt("ORDERID"); 
+            int orderDate = rs.getInt("ORDERDATE");
+            String orderStatus = rs.getString("ORDERSTATUS");
+            String paymentID = rs.getString("PAYMENTID");
+            
+            Orders order = new Orders(orderID, orderDate, orderStatus, paymentID);
+            return order;
         }
         return null;
     }
@@ -55,12 +60,19 @@ public class OrderManagerDAO {
 //    }
     //fetching order using UserID
     public ArrayList<Orders> fetchOrders(int userID) throws SQLException {
-        ArrayList<Orders> list = new ArrayList<>();
-        
         String fetch = "SELECT * FROM IOTBAY.ORDERS WHERE ORDERID =";
         ResultSet rs = st.executeQuery(fetch);
+                ArrayList<Orders> list = new ArrayList<>();
         
-        return null;
+        while (rs.next()) {
+            int orderID = rs.getInt("ORDERID"); 
+            int orderDate = rs.getInt("ORDERDATE");
+            String orderStatus = rs.getString("ORDERSTATUS");
+            String paymentID = rs.getString("PAYMENTID");
+            
+            list.add(new Orders(orderID, orderDate, orderStatus, paymentID));
+        }
+        return list;
         
     }
  }
