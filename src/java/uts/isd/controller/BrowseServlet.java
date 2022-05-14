@@ -36,7 +36,7 @@ public class BrowseServlet extends HttpServlet {
         HttpSession session = request.getSession();
         
         //get product manager
-        ProductDBManager productDBManager = (ProductDBManager)session.getAttribute("productDBManager");
+        ProductDBManager productDBManager = (ProductDBManager)session.getAttribute("productManager");
         
 //        try { 
 //            // get all products and push it into product array variable
