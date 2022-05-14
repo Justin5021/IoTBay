@@ -67,7 +67,7 @@
                 <div class="btn-container-item" style="padding: 0.75rem">
                     <a href="LogoutServlet">
                         <button class="view-btn btn btn-outline-secondary btn-lg">
-                            <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+                            <i class="fas fa-sign-out-alt" aria-hidden="true"></i> Logout
                         </button>
                     <a/>
                 </div>
