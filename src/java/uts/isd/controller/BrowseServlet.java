@@ -38,38 +38,20 @@ public class BrowseServlet extends HttpServlet {
         //get product manager
         ProductDBManager productDBManager = (ProductDBManager)session.getAttribute("productManager");
         
-//        try { 
-//            // get all products and push it into product array variable
-//            productList = productDBManager.listAllProducts();
-//            
-//            // if product array is not empty, then show product list
-//            if (!productList.isEmpty()) {
-//                session.setAttribute("products", productList);
-//            }
-//        } 
-//        catch (SQLException ex) {           
-//            Logger.getLogger(BrowseServlet.class.getName()).log(Level.SEVERE, null, ex);  
-//        } 
-//        finally {
-//            //anything that happens will eventually show browsing page
-//            request.getRequestDispatcher("browsing.jsp").include(request, response);
-//            //session.setAttribute("productErr", null);
-//        }
-          try {
-            productList = productDBManager.listAllProducts();
-            if (!productList.isEmpty()) {
-                session.setAttribute("products", productList);
-                request.getRequestDispatcher("browsing.jsp").include(request, response);
-            }
-            else {
-                session.setAttribute("empty", "Empty List");
-                request.getRequestDispatcher("main.jsp").include(request, response);
-            }
-            } 
-          catch (SQLException | NullPointerException ex) {
-                //System.out.println(ex.getMessage() == null ? "Incorrect Email or Password" : "Welcome");
-                System.out.println(ex.getMessage());
+        try {
+          productList = productDBManager.listAllProducts();
+          if (!productList.isEmpty()) {
+              session.setAttribute("products", productList);
+              request.getRequestDispatcher("browsing.jsp").include(request, response);
           }
+          else {
+              session.setAttribute("empty", "Empty List");
+              request.getRequestDispatcher("main.jsp").include(request, response);
+          }
+          } 
+        catch (SQLException | NullPointerException ex) {
+              System.out.println(ex.getMessage());
+        }
         
     }
 }
