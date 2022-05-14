@@ -47,7 +47,8 @@
         </nav>
         
         <% 
-            int userID = 1;
+            User user = (User)session.getAttribute("user");
+            int userID = user.getUserID();
             String firstName = request.getParameter("fname");
             String lastName = request.getParameter("lname");
             String email = request.getParameter("email");

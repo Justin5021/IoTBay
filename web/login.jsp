@@ -67,7 +67,7 @@
                             </tr>    
                         </table>
                         <div>
-                            <button href="welcome.jsp" type="submit" class="btn login">Login</button>
+                            <button type="submit" class="btn login">Login</button>
                         </div>
                     </form>
                 </div>
