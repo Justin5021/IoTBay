@@ -84,7 +84,7 @@ public class UserManagerDAO {
                 + "STREETTYPE=" + "'" + streetType + "', "
                 + "SUBURB=" + "'" + suburb + "', "
                 + "USTATE=" + "'" + state + "', "
-                + "POSTCODE=" + "'" + postcode + ", "
+                + "POSTCODE=" + "'" + postcode + "', "
                 + "COUNTRY=" + "'" + country + "' "
                 + "WHERE USERID=" + Id;
         System.out.print(fetch);

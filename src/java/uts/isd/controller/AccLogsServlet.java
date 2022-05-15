@@ -22,7 +22,7 @@ public class AccLogsServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         HttpSession session = request.getSession();
-        UserManagerDAO manager = (UserManagerDAO) session.getAttribute("manager");
+        UserManagerDAO manager = (UserManagerDAO) session.getAttribute("userManager");
         ArrayList<User> statusLogs = new ArrayList<>();
         ArrayList<User> timeLogs = new ArrayList<>();
         User user = (User) session.getAttribute("user");
