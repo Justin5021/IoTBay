@@ -56,5 +56,15 @@ public class CartManagerDAO {
         }
         return cartList;   
     }
+
+    public void removeFromCart(int userID, int productID) throws SQLException{
+        String fetch = "DELETE FROM IOTBAY.CART WHERE USERID = " + userID + " AND PRODUCTID = " + productID;
+        try{
+            st.executeUpdate(fetch);
+        }
+        catch(SQLException ex) {
+            System.out.println(ex.toString());
+        }
+    }
     
 }
