@@ -53,6 +53,10 @@
         <servlet-name>AccLogsServlet</servlet-name>
         <servlet-class>uts.isd.controller.AccLogsServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>viewCartServlet</servlet-name>
+        <servlet-class>uts.isd.controller.viewCartServlet</servlet-class>
+    </servlet>
     
     
     <!--Servlet Mapping-->
@@ -107,6 +111,10 @@
     <servlet-mapping>
         <servlet-name>AccLogsServlet</servlet-name>
         <url-pattern>/AccLogsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>viewCartServlet</servlet-name>
+        <url-pattern>/viewCartServlet</url-pattern>
     </servlet-mapping>
     
     <session-config>

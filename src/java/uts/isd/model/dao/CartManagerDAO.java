@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 /**
  *
@@ -42,5 +43,18 @@ public class CartManagerDAO {
         
         }
     } 
+    
+    public ArrayList<Cart> viewCart(int userID) throws SQLException {
+        String fetch = "SELECT * FROM IOTBAY.CART WHERE USERID = " + userID;
+        ResultSet rs = st.executeQuery(fetch);
+        ArrayList<Cart> cartList = new ArrayList<Cart>();
+        while(rs.next()){
+            String uID = rs.getString(1);
+            String pID = rs.getString(2);
+            String cQuantity = rs.getString(3);
+            cartList.add(new Cart(Integer.parseInt(uID), Integer.parseInt(pID), Integer.parseInt(cQuantity)));
+        }
+        return cartList;   
+    }
     
 }

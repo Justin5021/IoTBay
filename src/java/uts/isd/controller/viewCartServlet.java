@@ -23,28 +23,35 @@ import uts.isd.model.User;
  *
  * @author Jacky Bahary 13997263
  */
-public class addCartServlet extends HttpServlet {
+public class viewCartServlet extends HttpServlet {
     @Override   
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        // create product array
+        ArrayList<Cart> cartList = new ArrayList<Cart>();
+        
+        //get session
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
-        //ArrayList<Item> cart = new ArrayList<Item>();
-        //String userID = request.getParameter("userID");
-        int productID = Integer.parseInt(request.getParameter("productID"));
-        int cartQuantity = Integer.parseInt(request.getParameter("cartQuantity"));
 
         CartManagerDAO cartManager = (CartManagerDAO) session.getAttribute("cartManager");
 
         int uID = user.getUserID();
         
-        try{
-            cartManager.addToCart(uID, productID, cartQuantity); //adding to cart
-            System.out.println("Added to Database"); 
-        }catch(SQLException ex){
-            Logger.getLogger(addCartServlet.class.getName()).log(Level.SEVERE, null, ex);
+        try {
+          cartList = cartManager.viewCart(uID);
+          if (!cartList.isEmpty()) {
+              session.setAttribute("cart", cartList);
+              System.out.println("Cart Found");
+          }
+          else {
+              System.out.println("Cart Not Found");
+          }
+        } 
+        catch (SQLException | NullPointerException ex) {
+              System.out.println(ex.getMessage());
         }
         
-        request.getRequestDispatcher("browsing.jsp").include(request, response);
+        request.getRequestDispatcher("cart.jsp").include(request, response);
         
     }
     

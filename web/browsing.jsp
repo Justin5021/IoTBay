@@ -72,6 +72,9 @@
             <div>
                 <a href="addToCart.jsp"><button type="submit" class="btn add">Add to Cart</button></a>
             </div>
+            <div>
+                <a href="viewCartServlet"><button type="submit" class="btn add">View Cart</button></a>
+            </div>
         </div>
     </body>
 </html>
