@@ -28,8 +28,6 @@ public class addCartServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
-        //ArrayList<Item> cart = new ArrayList<Item>();
-        //String userID = request.getParameter("userID");
         int productID = Integer.parseInt(request.getParameter("productID"));
         int cartQuantity = Integer.parseInt(request.getParameter("cartQuantity"));
 

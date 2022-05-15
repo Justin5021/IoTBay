@@ -51,13 +51,14 @@
 
         <div class="container text-center pt-4">
             <h2 class="title">Products</h2>
-            <div class="row text-center">   
+            <div class="row text-center pt-2">   
             <% for (Product product: products){ %>
                 <div class="col-xl-3 col-md-4 col-sm-6 mb-4"> 
                     <div class="card h-100 box-shadow">
                         <div class="card-body">
                             <img class="card-img-top" src="images/<%=product.getProductImageURL()%>" alt="Photo of <%= product.getProductName()%> ">
                             <h5 class="card-title"><%= product.getProductName()%></h5>
+                            <p class ="card-test">Product ID: <%= product.getProductID()%></p>
                             <p class="card-text">Price: <%= priceFormat.format(product.getProductPrice())%></p>
                             <% if (product.getProductQuantity()> 0) { %>
                                 <p class="card-text">Quantity: <%= product.getProductQuantity()%></p>
@@ -72,7 +73,7 @@
             <div>
                 <a href="addToCart.jsp"><button type="submit" class="btn add">Add to Cart</button></a>
             </div>
-            <div>
+            <div class = "pt-2 pb-2">
                 <a href="viewCartServlet"><button type="submit" class="btn add">View Cart</button></a>
             </div>
         </div>
