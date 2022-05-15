@@ -1,4 +1,4 @@
-* {
+/** {
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -17,7 +17,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Index Page */
+ Index Page 
 .index-container {
     text-align: center;
     padding: 1rem 1rem;
@@ -33,7 +33,7 @@ body {
     padding: 0.5rem 0.5rem;
 }
 
-/* Navigation Bar Styling */
+ Navigation Bar Styling 
 nav {
     background: #0082e6;
     height: 5rem;
@@ -134,9 +134,9 @@ nav ul li a.active, nav ul li a:hover {
     }
 }
 
-/*
+
  * Login Page
- */
+ 
 
 .login-container {
     display: grid;
@@ -192,9 +192,9 @@ nav ul li a.active, nav ul li a:hover {
     border-radius: 0.2rem;
 }
 
-/*
+
  * Register Page
- */
+ 
 
 .register-container {
     display: grid;
@@ -256,7 +256,7 @@ nav ul li a.active, nav ul li a:hover {
     border-radius: 0.2rem;
 }
 
-/* Welcome Page Styling */
+ Welcome Page Styling 
 .welcome-head {
     text-align: center;
     font-size: 3.75rem;
@@ -325,7 +325,7 @@ nav ul li a.active, nav ul li a:hover {
     cursor: pointer;
 }
 
-/* Main Page Styling */
+ Main Page Styling 
 .main-table-container {
     display: flex;
     flex-direction: column;
@@ -366,7 +366,7 @@ nav ul li a.active, nav ul li a:hover {
     padding: 1rem 1rem;
 }
 
-/* Edit Page Styling */
+ Edit Page Styling 
 .edit-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -401,4 +401,226 @@ nav ul li a.active, nav ul li a:hover {
     border: border-box;
     border-radius: 0.2rem;
     text-align: center;
+}
+
+
+/* About page */
+.about{
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+}
+
+.about-background{
+    background: url(./images/aboutus.jpeg) no-repeat right;
+    background-color: #fdfdfd;
+    background-size: 85%;
+    overflow: hidden;
+    padding: 300px 0;
+    
+}
+
+.about-container{
+    background-color: #fdfdfd;
+    width: 45%;
+    float: left;
+    padding: 40px;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+.about-container h1{
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    
+}
+
+.about-text{
+    font-size: 15px;
+    color: #545454;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.about-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0D6EFD;
+    color: #f1f1f1;
+    border-radius: 5px;
+    text-decoration: none;
+}
+@media screen and (max-width:1400px){
+    .about-background{
+        padding: 80px;
+    }
+    .about-container{
+        padding: 20px;
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width:1100px){
+    .about-background{
+        background-size: 100%;
+        padding: 40px;
+    }
+    .about-container{
+        width: 100%;
+    }
+}
+
+/* Contact page */
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px,100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(./images/contactus.jpeg);
+    background-size: cover;
+    margin: 20px;
+}
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.contact .content p{
+    font-weight: 300;
+    color: #fff;
+}
+.contact-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contact-container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.contact-container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    margin-left: 80px;
+}
+
+.contact-container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.contact-container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.contact-container .contactInfo .box .text h3{
+    font-weight: 500;
+    color: #0D6EFD;
+}
+
+.contact-container .contactForm{
+    width: 50%;
+    padding: 40px;
+    margin-right: 20px;
+    background: #fff;
+    opacity: .9;
+}
+
+.contact-container .contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contact-container .contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contact-container .contactForm .inputBox input,
+.contact-container .contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contact-container .contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contact-container .contactForm .inputBox input:focus ~ span,
+.contact-container .contactForm .inputBox input:valid ~ span,
+.contact-container .contactForm .inputBox textarea:focus ~ span,
+.contact-container .contactForm .inputBox textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contact-container .contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: #0D6EFD;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px
+}
+
+@media (max-width: 900px){
+    .contact{
+        padding: 50px;
+    }
+    
+    .contact-container{
+        flex-direction: column;
+    }
+    .contact-container .contactInfo,
+    .contact-container .contactForm{
+        width: 100%;
+    } 
 }
