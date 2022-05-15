@@ -32,21 +32,25 @@ public class editProductServlet extends HttpServlet {
         ProductDBManager productManager = (ProductDBManager) session.getAttribute("productManager");
         
         int productID = Integer.parseInt(request.getParameter("productID"));
-        
-        Product productFound;
+        int productSerialNum = Integer.parseInt(request.getParameter("productSerialNum"));
+        String productName = request.getParameter("productName");
+        String productCategory = request.getParameter("productCategory");
+        String productBrand = request.getParameter("productBrand");
+        float productPrice = Float.parseFloat(request.getParameter("productPrice"));
+        int productQuantity = Integer.parseInt(request.getParameter("productQuantity"));
+        String productImageURL = request.getParameter("productImageURL");
+        int supplierID = Integer.parseInt(request.getParameter("supplierID"));
         
         try {
-          productFound = productManager.findProduct(productID);
-          System.out.println(productFound.getProductName());
-          session.setAttribute("product", productFound);
-          System.out.println("Product Found");
+          productManager.updateProduct(productID, productSerialNum, productQuantity, supplierID, productPrice, productName, productCategory, productBrand, productImageURL);
+          System.out.println("Product Updated");
         } 
         catch (SQLException | NullPointerException ex) {
               System.out.println(ex.getMessage());
               Logger.getLogger(editProductServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        request.getRequestDispatcher("editProduct.jsp").include(request, response);
+        request.getRequestDispatcher("staffMain.jsp").include(request, response);
         
     }
     

@@ -77,7 +77,7 @@
         <servlet-name>DeleteSupplierServlet</servlet-name>
         <servlet-class>uts.isd.controller.DeleteSupplierServlet</servlet-class>
     </servlet>
-        <servlet>
+    <servlet>
         <servlet-name>DeleteProductServlet</servlet-name>
         <servlet-class>uts.isd.controller.DeleteProductServlet</servlet-class>
     </servlet>

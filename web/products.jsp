@@ -94,13 +94,49 @@
             </div>
         </div>
         <div class ="container my-3">
+            <div class ="table-responsive">
+                <form action="editProductServlet" method="POST">
+                    <table class="table table-sm table-bordered">
+                        <p class="display-6">Edit Product</p>
+                        <thead>
+                          <tr>
+                            <th scope="col">Product ID</th>
+                            <th scope="col">Product Serial Number</th>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Product Category</th>
+                            <th scope="col">Product Brand</th>
+                            <th scope="col">Product Price</th>
+                            <th scope="col">Product Quantity</th>
+                            <th scope="col">Product Image URL</th>
+                            <th scope="col">Supplier ID</th>
+                          </tr>
+                        </thead>
+                        <tr>
+                            <td><input type="text" class="product-field" name="productID" placeholder="Enter Product ID"></td>
+                            <td><input type="text" class="product-field" name="productSerialNum" placeholder="Enter Product Serial Number"></td>
+                            <td><input type="text" class="product-field" name="productName" placeholder="Enter Product Name"></td>
+                            <td><input type="text" class="product-field" name="productCategory" placeholder="Enter Product Category"></td>
+                            <td><input type="text" class="product-field" name="productBrand" placeholder="Enter Product Brand"></td>
+                            <td><input type="text" class="product-field" name="productPrice" placeholder="Enter Product Price"></td>
+                            <td><input type="text" class="product-field" name="productQuantity" placeholder="Enter Product Quantity"></td>
+                            <td><input type="text" class="product-field" name="productImageURL" placeholder="Enter Product Image URL"></td>
+                            <td><input type="text" class="product-field" name="supplierID" placeholder="Enter Supplier ID"></td>
+                        </tr>
+                        <tr>
+                            <button type="submit" class="btn btn-primary">Edit</button>
+                        </tr>
+                    </table> 
+                </form>
+            </div>
+        </div>
+        <div class ="container my-3">
             <p class="display-6">Delete Product</p>
             <form action="deleteProdServlet" method="POST">
                 <div class="form-group pb-4">
                   <label for="productID">Product ID:</label>
                   <input type="number" class="product-field" name="productID" placeholder="Enter Product ID">
                 </div>
-                <button type="submit" class="btn btn-primary ">Submit</button>
+                <button type="submit" class="btn btn-primary ">Delete</button>
             </form>
         </div>
     </body>
