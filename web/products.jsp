@@ -93,15 +93,15 @@
                 <a href="staffMain.jsp"><button type="button" class="btn btn-primary">Back to Dashboard</button></a>
             </div>
         </div>
-<!--        <div class ="container my-3">
-            <p class="display-6">Delete Cart Contents</p>
-            <form action="deleteCartServlet" method="POST">
+        <div class ="container my-3">
+            <p class="display-6">Delete Product</p>
+            <form action="deleteProdServlet" method="POST">
                 <div class="form-group pb-4">
                   <label for="productID">Product ID:</label>
                   <input type="number" class="product-field" name="productID" placeholder="Enter Product ID">
                 </div>
                 <button type="submit" class="btn btn-primary ">Submit</button>
             </form>
-        </div>-->
+        </div>
     </body>
 </html>
