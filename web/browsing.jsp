@@ -71,10 +71,10 @@
             <% } %>
             </div>
             <div>
-                <a href="addToCart.jsp"><button type="submit" class="btn add">Add to Cart</button></a>
+                <a href="addToCart.jsp"><button type="submit" class="btn btn-primary">Add to Cart</button></a>
             </div>
             <div class = "pt-2 pb-2">
-                <a href="viewCartServlet"><button type="submit" class="btn add">View Cart</button></a>
+                <a href="viewCartServlet"><button type="submit" class="btn btn-primary">View Cart</button></a>
             </div>
         </div>
     </body>

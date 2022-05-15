@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="uts.isd.model.Cart" %>
+<%@page import="uts.isd.model.User" %>
 <%@page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>
@@ -20,6 +21,7 @@
     <body>
         <%
             ArrayList<Cart> carts = (ArrayList<Cart>)session.getAttribute("cart");
+            User user = (User)session.getAttribute("user");
         %>
         <nav class="navbar navbar-expand-md navbar-dark bg-primary">
             <div class="container">
@@ -50,6 +52,8 @@
             <div class ="table-responsive">
                 <table class="table table-sm table-bordered">
                     <p class="display-6">Cart</p>
+                    <p class="display-7">User ID: <%=user.getUserID()%></p>
+                    <p class="display-7">User Name: <%=user.getFirstName()%> <%=user.getLastName()%></p>
                     <thead>
                       <tr>
                         <th scope="col">Product ID</th>
@@ -72,6 +76,7 @@
                         }
                     %>
                 </table> 
+                <a href="browsing.jsp"><button type="button" class="btn btn-primary">Back to Browsing</button></a>
             </div>
         </div>
 </html>
