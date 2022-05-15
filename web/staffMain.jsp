@@ -61,7 +61,7 @@
                     </a>
                 </div>
                 <div class="btn-container-item" style="padding: 0.75rem">
-                    <a href="#">
+                    <a href="viewProductServlet">
                         <button class="view-btn btn btn-outline-secondary btn-lg">
                             <i class="fas fa-barcode"></i> View Products
                         </button>

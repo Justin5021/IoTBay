@@ -37,7 +37,7 @@ public class ProductDBManager {
             String brand = rs.getString("PRODUCTBRAND");
             String image = rs.getString("PRODUCTIMAGEURL");
             
-            Product product = new Product(productID, serialNum, quantity, supplierID, price, name, category, brand, image);
+            Product product = new Product(productID, serialNum, name, category, brand, price, quantity, image, supplierID);
             return product;
         }
         return null;
@@ -69,7 +69,7 @@ public class ProductDBManager {
             String brand = rs.getString("PRODUCTBRAND");
             String image = rs.getString("PRODUCTIMAGEURL");
             
-            list.add(new Product(productID, serialNum, quantity, supplierID, price, name, category, brand, image));
+            list.add(new Product(productID, serialNum, name, category, brand, price, quantity, image, supplierID));
         }
         return list;
     }
@@ -91,7 +91,7 @@ public class ProductDBManager {
             String brand = rs.getString("PRODUCTBRAND");
             String image = rs.getString("PRODUCTIMAGEURL");
             
-            list.add(new Product(productID, serialNum, quantity, supplierID, price, name, category, brand, image));
+            list.add(new Product(productID, serialNum, name, category, brand, price, quantity, image, supplierID));
         }
         return list;
     }
@@ -113,7 +113,7 @@ public class ProductDBManager {
             String brand = rs.getString("PRODUCTBRAND");
             String image = rs.getString("PRODUCTIMAGEURL");
             
-            list.add(new Product(productID, serialNum, quantity, supplierID, price, name, category, brand, image));
+            list.add(new Product(productID, serialNum, name, category, brand, price, quantity, image, supplierID));
         }
         return list;
     }
@@ -147,7 +147,7 @@ public class ProductDBManager {
             String brand = rs.getString("PRODUCTBRAND");
             String image = rs.getString("PRODUCTIMAGEURL");
             
-            list.add(new Product(productID, serialNum, quantity, supplierID, price, name, category, brand, image));
+            list.add(new Product(productID, serialNum, name, category, brand, price, quantity, image, supplierID));
         }
         return list;
     }

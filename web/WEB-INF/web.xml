@@ -65,6 +65,10 @@
         <servlet-name>deleteCartServlet</servlet-name>
         <servlet-class>uts.isd.controller.deleteCartServlet</servlet-class>
     </servlet>
+        <servlet>
+        <servlet-name>viewProductServlet</servlet-name>
+        <servlet-class>uts.isd.controller.viewProductServlet</servlet-class>
+    </servlet>
     
     
     
@@ -132,6 +136,10 @@
     <servlet-mapping>
         <servlet-name>deleteCartServlet</servlet-name>
         <url-pattern>/deleteCartServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>viewProductServlet</servlet-name>
+        <url-pattern>/viewProductServlet</url-pattern>
     </servlet-mapping>
     
     <session-config>

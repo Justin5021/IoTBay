@@ -18,13 +18,13 @@ public class Product implements Serializable{
     public Product(
             int productID,
             int productSerialNum,
-            int productQuantity,
-            int supplierID,
-            float productPrice,
             String productName,
             String productCategory,
             String productBrand,
-            String productImageURL){
+            float productPrice,
+            int productQuantity,
+            String productImageURL,
+            int supplierID){
         this.productID = productID;
         this.productSerialNum = productSerialNum;
         this.productQuantity = productQuantity;
@@ -34,10 +34,6 @@ public class Product implements Serializable{
         this.productCategory = productCategory;
         this.productBrand = productBrand;
         this.productImageURL = productImageURL;
-    }
-
-    public Product(int id, int serialNum, int quantity, int supplierID, float price, String category, String brand, String image) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
     public int getProductID() {
