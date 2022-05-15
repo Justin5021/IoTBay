@@ -1,7 +1,7 @@
 <%-- 
     Document   : orderHistory
     Created on : Apr 19, 2022, 4:14:28 PM
-    Author     : Jacky Bahary 13997263
+    Author     : Jacky Bahary 13997263, Sung Hoon Kim 12596351
 --%>
 
 <%@page import="java.sql.DriverManager"%>

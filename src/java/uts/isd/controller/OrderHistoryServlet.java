@@ -22,7 +22,7 @@ import uts.isd.model.User;
 
 /**
  *
- * @author hooni
+ * @author Sung Hoon Kim 12596351
  */
 @WebServlet(name = "OrderHistoryServlet", urlPatterns = {"/OrderHistoryServlet"})
 public class OrderHistoryServlet extends HttpServlet {

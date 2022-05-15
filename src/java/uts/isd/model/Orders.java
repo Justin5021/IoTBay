@@ -24,6 +24,10 @@ public class Orders implements Serializable{
         this.orderDate = orderDate;
         this.orderStatus = orderStatus;
     }
+
+    public Orders(int orderID, String orderDate, String orderStatus, int paymentID) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public int getOrderID() {
         return orderID;
