@@ -35,7 +35,7 @@ public class RegisterServlet extends HttpServlet {
         String postcode = request.getParameter("postcode");
         String country = request.getParameter("country");
         String confirmed = request.getParameter("cpass");
-        UserManagerDAO manager = (UserManagerDAO) session.getAttribute("manager");
+        UserManagerDAO manager = (UserManagerDAO) session.getAttribute("userManager");
         validator.clear(session);
         
         if ( !password.equals(confirmed) ) { // Check that Password and Confirmed Password are the same
@@ -77,6 +77,7 @@ public class RegisterServlet extends HttpServlet {
                     request.getRequestDispatcher("welcome.jsp").include(request, response);
                 }
             } catch (SQLException | NullPointerException ex) {
+                System.out.println(ex.getMessage());
                 System.out.println(ex.getMessage() == null ? "Something went wrong" : "It works");
             }
         }

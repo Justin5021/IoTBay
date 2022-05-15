@@ -73,7 +73,7 @@
                                 </tr>
                                 <tr>
                                     <td> <label for="email">Email</label> </td>
-                                    <td> <input class='register-field' type="email" placeholder="<%=(emailErr != null ? emailErr : "Enter Last Name")%>" name="email" required> </td>
+                                    <td> <input class='register-field' type="email" placeholder="<%=(emailErr != null ? emailErr : "Enter Email")%>" name="email" required> </td>
                                 </tr>
                                 <tr>
                                     <td> <label for="phonenum">Phone Number</label> </td>

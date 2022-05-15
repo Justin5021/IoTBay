@@ -61,8 +61,8 @@ public class UserManagerDAO {
     public void addUser(String firstName, String lastName, String email, String password,
                         String phoneNumber, String streetNumber, String streetName, String streetType,
                         String suburb, String state, String postcode, String country) throws SQLException {       
-        String fetch = "INSERT INTO IOTBAY.USERS (FIRSTNAME, LASTNAME, EMAIL, PASS, PHONENUMBER, STREETNUMBER, STREETNAME, STREETTYPE, SUBURB, STATE, POSTCODE, COUNTRY)"
-                    + "VALUES (" + firstName + ",'" + lastName + "', '" + email + "', '" + password + "', '" 
+        String fetch = "INSERT INTO IOTBAY.USERS (FIRSTNAME, LASTNAME, EMAIL, PASS, PHONENUMBER, STREETNUMBER, STREETNAME, STREETTYPE, SUBURB, USTATE, POSTCODE, COUNTRY)"
+                    + "VALUES ('" + firstName + "', '" + lastName + "', '" + email + "', '" + password + "', '" 
                     + phoneNumber + "', '" + streetNumber + "', '" + streetName + "', '" + streetType + "', '" 
                     + suburb + "', '" + state + "', '" + postcode + "', '" + country + "')";
         st.execute(fetch);
@@ -74,18 +74,18 @@ public class UserManagerDAO {
             String suburb, String state, String postcode, String country) throws SQLException {
 
         String fetch = "UPDATE IOTBAY.Users "
-                + "SET FIRSTNAME=" + "'" + firstName + "',"
-                + "LASTNAME=" + "'" + lastName + "',"
-                + "EMAIL=" + "'" + email + "',"
-                + "PASS=" + "'" + password + "',"
-                + "PHONENUMBER=" + "" + phoneNumber + ","
-                + "STREETNUMBER=" + "" + streetNumber + ","
-                + "STREETNAME=" + "'" + streetName + "',"
-                + "STREETTYPE=" + "'" + streetType + "',"
-                + "SUBURB=" + "'" + suburb + "',"
-                + "STATE=" + "'" + state + "',"
-                + "POSTCODE=" + "" + postcode + ","
-                + "COUNTRY=" + "'" + country + "'"
+                + "SET FIRSTNAME=" + "'" + firstName + "', "
+                + "LASTNAME=" + "'" + lastName + "', "
+                + "EMAIL=" + "'" + email + "', "
+                + "PASS=" + "'" + password + "', "
+                + "PHONENUMBER=" + "'" + phoneNumber + "', "
+                + "STREETNUMBER=" + "'" + streetNumber + "', "
+                + "STREETNAME=" + "'" + streetName + "', "
+                + "STREETTYPE=" + "'" + streetType + "', "
+                + "SUBURB=" + "'" + suburb + "', "
+                + "USTATE=" + "'" + state + "', "
+                + "POSTCODE=" + "'" + postcode + ", "
+                + "COUNTRY=" + "'" + country + "' "
                 + "WHERE USERID=" + Id;
         System.out.print(fetch);
         st.executeUpdate(fetch);
@@ -141,7 +141,7 @@ public class UserManagerDAO {
                         rs.getString("STREETNAME"),
                         rs.getString("STREETTYPE"),
                         rs.getString("SUBURB"),
-                        rs.getString("STATE"),
+                        rs.getString("USTATE"),
                         rs.getString("POSTCODE"),
                         rs.getString("COUNTRY")
                 );
@@ -167,7 +167,7 @@ public class UserManagerDAO {
     }
 
     public boolean checkUser(String email) throws SQLException {
-        String fetch = "SELECT * FROM IOTBAY.Users WHERE Email=" + email;
+        String fetch = "SELECT * FROM IOTBAY.Users WHERE Email= '" + email + "'";
         ResultSet rs = st.executeQuery(fetch);
         while ( rs.next() ) {
             String userEmail = rs.getString(4);

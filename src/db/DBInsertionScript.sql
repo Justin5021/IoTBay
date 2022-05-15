@@ -7,7 +7,7 @@
  * Created: Apr 29, 2022
  */
 
-INSERT INTO IOTBAY.Users (FirstName, LastName, Email, Pass, PhoneNumber, StreetNumber, StreetName, StreetType, Suburb, "State", Postcode, Country)
+INSERT INTO IOTBAY.Users (FirstName, LastName, Email, Pass, PhoneNumber, StreetNumber, StreetName, StreetType, Suburb, UState, Postcode, Country)
 VALUES
 ('Gabriel', 'Smith', 'gab.smith@gmail.com', 'Test1234', '1234567890', '4', 'Pokemon', 'Street', 'Road' , 'NSW', '2000', 'Australia'),
 ('Wilson', 'Smith', 'wilson.smith@gmail.com', 'Test1234', '5912859201', '7', 'Pikachu', 'Street', 'Dolphin', 'NSW', '2000', 'Australia'),

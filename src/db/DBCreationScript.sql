@@ -14,7 +14,7 @@ CREATE TABLE Users (
     StreetName VARCHAR(50) NOT NULL, 
     StreetType VARCHAR(12) NOT NULL,
     Suburb VARCHAR(50) NOT NULL, 
-    "State" VARCHAR(15) NOT NULL, 
+    UState VARCHAR(15) NOT NULL, 
     Postcode VARCHAR(4) NOT NULL, 
     Country VARCHAR(50) NOT NULL, 
     PRIMARY KEY (UserID)
