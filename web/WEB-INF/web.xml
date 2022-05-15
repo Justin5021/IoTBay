@@ -103,8 +103,8 @@
     <servlet-mapping>
         <servlet-name>addCartServlet</servlet-name>
         <url-pattern>/addCartServlet</url-pattern>
-    </servlet>
-    <servlet>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>AccLogsServlet</servlet-name>
         <url-pattern>/AccLogsServlet</url-pattern>
     </servlet-mapping>
