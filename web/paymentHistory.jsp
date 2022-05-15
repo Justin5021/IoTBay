@@ -64,16 +64,17 @@ ResultSet resultSet = null;
             </div>
         </nav>
         <div class ="container my-3">
-            <div class ="table-responsive">
-                <table class="table table-sm table-bordered">
-                    <p class="display-6">Payment History</p>
-                    <thead>
-                      <tr>
-                        <th scope="col">Payment ID</th>
-                        <th scope="col">Payment Total</th>
-                        <th scope="col">Payment Info ID</th>
-                      </tr>
-                    </thead>
+                <div class ="table-responsive">
+                    <table class="table table-sm table-bordered">
+                        <p class="display-6">Payment History</p>
+                        <thead>
+                        <tr>
+                            <th scope="col">Payment ID</th>
+                            <th scope="col">Payment Total</th>
+                            <th scope="col">Payment Info ID</th>
+                            <th scope="col">Delete info</th>
+                        </tr>
+                        </thead>
                     <%
                         try {
                         connection = DriverManager.getConnection(
@@ -88,6 +89,7 @@ ResultSet resultSet = null;
                         <td><%=resultSet.getString("PaymentID")%></td>
                         <td><%=resultSet.getString("PaymentTotal")%></td>
                         <td><%=resultSet.getString("PaymentInfoID")%></td>
+                        <td> <input type="checkbox" name="PAYMENTID" value="${PaymentInfo.getPaymentInfoID}"></td>
                     </tr>
                     <%
                         }
@@ -98,6 +100,22 @@ ResultSet resultSet = null;
                     %>
                 </table>
             </div>
+            <div class="btn-container-item text-center" style="padding: 0.75rem">
+                    <a href="payment.jsp">
+                        <button class="view-btn btn btn-outline-secondary btn-lg">
+                            <i class="fas fa-hourglass"></i> Add payment
+                        </button>
+                    <a/>
+            </div>
+                
+            <form action="DeletePaymentInfoServlet">
+                <p class="display-6">Delete Payment Info</p>
+                <Label>Payment Info ID:</label>
+                <input type="number" name="PaymentInfoID" placeholder="Enter Info ID">
+                <div class="btn-container-item" style="padding: 0.75rem">
+                        <button type="submit" class="view-btn btn btn-outline-secondary btn-lg">Delete payment</button>
+                </div>
+            </form>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
