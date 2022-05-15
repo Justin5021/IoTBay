@@ -54,20 +54,15 @@
                     </div>
                     <div class='cart-item row justify-content-center'>
                         <table class="cart-table table table-responsive" style="width: auto;">
-                            <tbody>
-                                <tr>
-                                    <td> <label for="userID">User ID</label> </td>
-                                    <td> <input class='cart-field' type="text" placeholder="Enter User ID" name="userID" required> </td>
-                                </tr>
-                                
+                            <tbody>                                
                                 <tr>
                                     <td> <label for="productID">Product ID</label> </td>
-                                    <td> <input class='cart-field' type="text" placeholder="Enter Product ID" name="productID" required> </td>
+                                    <td> <input class='cart-field' type="number" placeholder="Enter Product ID" name="productID" required> </td>
                                 </tr>
                                 
                                 <tr>
                                     <td> <label for="cartQuantity">Quantity</label> </td>
-                                    <td> <input class='cart-field' type="text" placeholder="Enter Quantity" name="cartQuantity" required> </td>
+                                    <td> <input class='cart-field' type="number" placeholder="Enter Quantity" name="cartQuantity" required> </td>
                                 </tr>
                             </tbody>
                         </table>
