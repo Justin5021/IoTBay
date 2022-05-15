@@ -51,7 +51,7 @@
             String phoneErr = (String) session.getAttribute("phoneErr");
         %>
         <div class="container text-center">
-            <form class="register-form" action="staffWelcome.jsp" method="POST">
+            <form class="register-form" action="StaffRegisterServlet" method="POST">
                 
                 <div class='register-container'>
                     <div class='register-item' style="margin: 1cm">
@@ -73,7 +73,7 @@
                                 
                                 <tr>
                                     <td> <label for="email">Email</label> </td>
-                                    <td> <input class='register-field' type="email" placeholder="<%=(emailErr != null ? emailErr : "Enter Last Name")%>" name="email" required> </td>
+                                    <td> <input class='register-field' type="email" placeholder="<%=(emailErr != null ? emailErr : "Enter Email")%>" name="email" required> </td>
                                 </tr>
                                 
                                 <tr>

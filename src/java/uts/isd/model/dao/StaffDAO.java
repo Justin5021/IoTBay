@@ -48,7 +48,7 @@ public class StaffDAO {
     public void addStaff(String firstName, String lastName, String email, String pass, String phoneNum, String country) throws SQLException{
         String query = 
                 "INSERT INTO IOTBAY.STAFF(STAFFFIRSTNAME, STAFFLASTNAME, STAFFEMAIL, STAFFPASS, STAFFPHONE, STAFFCOUNTRY) " +
-                "VALUES('" + firstName + "', '" + lastName + "', '" + email + "', '" + pass + "', '" + phoneNum + "', " + country + ")";
+                "VALUES('" + firstName + "', '" + lastName + "', '" + email + "', '" + pass + "', '" + phoneNum + "', '" + country + "')";
         st.execute(query);
     }
 
@@ -67,7 +67,7 @@ public class StaffDAO {
     }
 
     public boolean checkStaff(String email) throws SQLException {
-        String fetch = "SELECT * FROM IOTBAY.Users WHERE Email=" + email;
+        String fetch = "SELECT * FROM IOTBAY.Staff WHERE StaffEmail= '" + email + "'";
         ResultSet rs = st.executeQuery(fetch);
         while ( rs.next() ) {
             String userEmail = rs.getString(4);
