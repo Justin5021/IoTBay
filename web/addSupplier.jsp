@@ -1,7 +1,7 @@
 <%-- 
     Document   : addSupplier
     Created on : May 14, 2022, 10:15:18 PM
-    Author     : User
+    Author     : Justin
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -59,8 +59,8 @@
                                 </tr>
                                 
                                 <tr>
-                                    <td> <label for="lname">Last Name</label> </td>
-                                    <td> <input class='add-field' type="text" placeholder="Enter Last Name" name="suppaddress" required> </td>
+                                    <td> <label for="lname">Address</label> </td>
+                                    <td> <input class='add-field' type="text" placeholder="Enter Address" name="suppaddress" required> </td>
                                 </tr>
                                 
                                 <tr>
@@ -70,7 +70,7 @@
                                 
                                 <tr>
                                     <td> <label for="email">Email</label> </td>
-                                    <td> <input class='add-field' type="email" placeholder="Enter Email Address" name="suppemail" required> </td>
+                                    <td> <input class='add-field' type="email" placeholder="Enter Email" name="suppemail" required> </td>
                                 </tr>
                             </tbody>
                         </table>

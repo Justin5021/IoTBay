@@ -12,7 +12,7 @@ import uts.isd.model.Supplier;
 import uts.isd.model.dao.SupplierDBManager;
 
 /**
- * @author User
+ * @author Pei-han
  */
 public class SupplierServlet extends HttpServlet {
     @Override

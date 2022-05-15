@@ -3,6 +3,7 @@
     Created on : 2022年4月27日, 上午1:47:08
     Author     : Pei-han lee
 --%>
+<%@page import="uts.isd.model.Product"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -87,7 +88,7 @@ ResultSet resultSet = null;
                             <td><%=resultSet.getString("PRODUCTNAME") %></td>
                             <td><%=resultSet.getString("PRODUCTBRAND") %></td>
                             <td><%=resultSet.getString("PRODUCTPRICE") %></td>
-                            <td><a href="DeleteProduct.jsp?id=<%=resultSet.getString("id") %>"><button type="button"  class="delete">Delete</button></a></td>
+                            <td><a href="DeleteProduct.jsp?id=<%=resultSet.getString("id") %>"><button type="submit"  class="delete">Delete</button></a></td>
                      
                                     </tr>
                     <%

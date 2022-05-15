@@ -1,19 +1,34 @@
 <%-- 
     Document   : supplier
     Created on : 2022年5月14日, 下午4:37:24
-    Author     : roddi
+    Author     : pei-han
 --%>
-<%@page import="java.util.List"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import="uts.isd.model.Supplier"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="java.sql.*"%>
-<%@page import="java.sql.Connection"%>
-<%@page import="uts.isd.model.dao.*"%>
+<%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="uts.isd.model.dao.SupplierDBManager"%>
+
+<%
+String driverName = "com.mysql.jdbc.Driver";
+String connectionUrl = "jdbc:derby://localhost:1527/";
+String dbName = "usersdb";
+String userId = "iotbay";
+String password = "admin";
+
+try {
+Class.forName(driverName);
+} catch (ClassNotFoundException e) {
+e.printStackTrace();
+}
+
+Connection connection = null;
+Statement statement = null;
+ResultSet resultSet = null;
+%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -54,39 +69,51 @@
             <div class ="table-responsive">
                 <table class="table table-sm table-bordered">
                     <p class="display-6">Supplier List</p>               
-                <%
-                    Supplier supplier = (Supplier) session.getAttribute("listout");
-                %>      
                     <thead>
                         <tr>
                             <th scope="col">SupplierID</th>
+                            <th scope="col">Name</th>
                             <th scope="col">Address</th>
                             <th scope="col">PhoneNumber</th>
-                            <th scope="col">Name</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Add/Delete</th>
+                            <th scope="col">Delete</th>
                         </tr>
                     </thead>
+                     <%
+                        try {
+                        connection = DriverManager.getConnection(
+                        connectionUrl + dbName, userId, password);
+                        statement = connection.createStatement();
+                        String sql = "SELECT * FROM SUPPLIER";
+
+                        resultSet = statement.executeQuery(sql);
+                        while (resultSet.next()) {
+                    %>
                     <tbody>
                         <tr>
-                            <td>${listout.supplierID}</td>
-                            <td>${listout.supplierAddress}</td>
-                            <td>${listout.supplierPhone}</td>
-                            <td>${listout.supplierName}</td>
-                            <td>${listout.supplierEmail}</td>
-                            <td>
-                                <a class="btn-danger" href="DeleteSupplierServlet?id=<%=Supplier.getID()%>">Delete</a>
-                            </td>
-                        </tr>
-                    </tbody>
+                            <td><%=resultSet.getString("SUPPLIERID")%></td>
+                            <td><%=resultSet.getString("SUPPLIERNAME")%></td>
+                            <td><%=resultSet.getString("SUPPLIERADDRESS")%></td>
+                            <td><%=resultSet.getString("SUPPLIERPHONE")%></td>
+                            <td><%=resultSet.getString("SUPPLIEREMAIL")%></td>
+                            <td><button class="view-btn btn btn-outline-secondary btn-lg"> <i class="fas fa-truck-moving"></i> Delete </button></td>
 
+                        </tr>
+ <%
+                        }
+
+                        } catch (Exception e) {
+                        e.printStackTrace();
+                        }
+                    %>
+                    </tbody>
             <a href="addSupplier.jsp">
                 <button class="view-btn btn btn-outline-secondary btn-lg">
                     <i class="fas fa-truck-moving"></i> Add Suppliers
                 </button>
             <a/>
-        </div>
-    </div>
+                </div>
+            </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>

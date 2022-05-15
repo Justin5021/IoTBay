@@ -73,6 +73,18 @@
         <servlet-name>deleteProdServlet</servlet-name>
         <servlet-class>uts.isd.controller.deleteProdServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteSupplierServlet</servlet-name>
+        <servlet-class>uts.isd.controller.DeleteSupplierServlet</servlet-class>
+    </servlet>
+        <servlet>
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <servlet-class>uts.isd.controller.DeleteProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProductServlet</servlet-name>
+        <servlet-class>uts.isd.controller.ProductServlet</servlet-class>
+    </servlet>
     
     
     
@@ -149,6 +161,19 @@
         <servlet-name>deleteProdServlet</servlet-name>
         <url-pattern>/deleteProdServlet</url-pattern>
     </servlet-mapping>
+        </servlet>
+        <servlet>
+        <servlet-name>DeleteSupplierServlet</servlet-name>
+        <servlet-class>DeleteSupplierServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <servlet-class>DeleteProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProductServlet</servlet-name>
+        <servlet-class>ProductServlet</servlet-class>
+    </servlet>
     
     <session-config>
         <session-timeout>

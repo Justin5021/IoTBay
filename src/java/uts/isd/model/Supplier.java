@@ -12,7 +12,7 @@ import java.io.Serializable;
  */
 public class Supplier implements Serializable{
     private int supplierID;
-    private String supplierAddress, supplierPhone, supplierName, supplierEmail;
+    private String supplierName, supplierAddress, supplierPhone, supplierEmail;
     
     public Supplier(
             int supplierID,
@@ -32,9 +32,9 @@ public class Supplier implements Serializable{
             String supplierAddress,
             String supplierPhone,
             String supplierEmail){
+        this.supplierName = supplierName;
         this.supplierAddress = supplierAddress;
         this.supplierPhone = supplierPhone;
-        this.supplierName = supplierName;
         this.supplierEmail = supplierEmail;
     }
 

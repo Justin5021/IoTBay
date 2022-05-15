@@ -79,12 +79,12 @@ public class SupplierDBManager {
 
         while (rs.next()) {
                 int SupplierID = rs.getInt("SUPPLIERID");
+                String SupplierName = rs.getString("SUPPLIERNAME");
                 String address = rs.getString("SUPPLIERADDRESS");
                 String number  = rs.getString("SUPPLIERPHONE");
-                String SupplierName = rs.getString("SUPPLIERNAME");
                 String email = rs.getString("EMAIL");
 
-            suppliers.add(new Supplier(SupplierID, address, number, SupplierName, email));
+            suppliers.add(new Supplier(SupplierID, SupplierName, address, number, email));
         }
         return suppliers;
     }
