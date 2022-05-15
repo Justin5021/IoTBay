@@ -24,11 +24,23 @@ public class CartManagerDAO {
     }
     
     // Create - add a new product
-    public void addCart(int userID, int productID, int cartQuantity ) throws SQLException{
-        String query = 
-                "INSERT INTO IOTBAY.CART(USERID, PRODUCTID, CARTQUANTITY) " +
-                "VALUES('" + userID + "', " + productID + ", '" + cartQuantity + "')";
-        st.execute(query);
+    public void addToCart(int userID, int productID, int cartQuantity ) throws SQLException{
+        
+        String fetch = "SELECT * FROM IOTBAY.CART WHERE USERID = " + userID + " AND PRODUCTID =" + productID;
+        ResultSet rs = st.executeQuery(fetch);
+        int i = 0;
+        while(rs.next()){
+            i++;
+        }
+        if(i > 0){
+            System.out.println("Product exists! " + productID);
+            st.executeUpdate("UPDATE IOTBAY.CART SET CARTQUANTITY = " + cartQuantity + " WHERE PRODUCTID = " + productID + " AND USERID = " + userID);
+            }
+        else{
+            System.out.println("Item doesn't exist! " + productID);
+            st.executeUpdate("INSERT INTO IOTBAY.CART(USERID, PRODUCTID, CARTQUANTITY) VALUES(" + userID + ", " + productID + ", " + cartQuantity + ")");
+        
+        }
     } 
     
 }

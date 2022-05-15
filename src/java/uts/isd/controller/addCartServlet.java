@@ -17,11 +17,35 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import uts.isd.model.Cart;
 import uts.isd.model.dao.CartManagerDAO;
+import uts.isd.model.User;
 
 /**
  *
- * @author jacky
+ * @author Jacky Bahary 13997263
  */
-public class addCartServlet {
+public class addCartServlet extends HttpServlet {
+    @Override   
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        //ArrayList<Item> cart = new ArrayList<Item>();
+        //String userID = request.getParameter("userID");
+        int productID = Integer.parseInt(request.getParameter("productID"));
+        int cartQuantity = Integer.parseInt(request.getParameter("cartQuantity"));
+
+        CartManagerDAO cartManager = (CartManagerDAO) session.getAttribute("cartManager");
+
+        int uID = user.getUserID();
+        
+        try{
+            cartManager.addToCart(uID, productID, cartQuantity); //adding to cart
+            System.out.println("Added to Database"); 
+        }catch(SQLException ex){
+            Logger.getLogger(addCartServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        request.getRequestDispatcher("cart.jsp").include(request, response);
+        
+    }
     
 }
