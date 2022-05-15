@@ -17,6 +17,9 @@
         <title> Welcome </title>
     </head>
     <body>
+        <%
+            User user = (User)session.getAttribute("user");
+        %>
         <nav class="navbar navbar-expand-md navbar-dark bg-primary">
             <div class="container">
                 <a href="index.jsp" class="navbar-brand"> <h1> IoTBay </h1> </a>
@@ -47,16 +50,13 @@
         </nav>
         
         <% 
-            String firstName = request.getParameter("fname");
-            String lastName = request.getParameter("lname");
             String email = request.getParameter("email");
-            String phoneNumber = request.getParameter("phonenum");
         %>
         
         <div class="container text-center"  style="margin-top: 1cm">
-            <h1> Welcome <%= firstName + " " + lastName %>! </h1>
+            <h1> Welcome <%= user.getFirstName() + " " + user.getLastName() %>! </h1>
             <p>Your email is <%=email%></p>
-            <p>Your phone number is <%=phoneNumber%></p>
+            <p>Your phone number is <%=user.getPhoneNumber()%></p>
             <br />
             <p> Please click on this button below to visit your dashboard </p>
             <form action="main.jsp" method="POST">
