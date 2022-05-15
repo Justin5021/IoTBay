@@ -156,28 +156,27 @@
     <servlet-mapping>
         <servlet-name>viewProductServlet</servlet-name>
         <url-pattern>/viewProductServlet</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping> 
     <servlet-mapping>
         <servlet-name>deleteProdServlet</servlet-name>
         <url-pattern>/deleteProdServlet</url-pattern>
     </servlet-mapping>
-        </servlet>
-        <servlet>
+    <servlet-mapping>
         <servlet-name>DeleteSupplierServlet</servlet-name>
-        <servlet-class>DeleteSupplierServlet</servlet-class>
-    </servlet>
-    <servlet>
+        <url-pattern>/DeleteSupplierServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>DeleteProductServlet</servlet-name>
-        <servlet-class>DeleteProductServlet</servlet-class>
-    </servlet>
-    <servlet>
+        <url-pattern>/DeleteProductServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>ProductServlet</servlet-name>
-        <servlet-class>ProductServlet</servlet-class>
-    </servlet>
+        <url-pattern>/ProductServlet</url-pattern>
+    </servlet-mapping>
     
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-</web-app>
+</web-app>  
