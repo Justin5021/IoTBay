@@ -57,6 +57,11 @@
         <servlet-name>viewCartServlet</servlet-name>
         <servlet-class>uts.isd.controller.viewCartServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>editProductServlet</servlet-name>
+        <servlet-class>uts.isd.controller.editProductServlet</servlet-class>
+    </servlet>
+    
     
     
     <!--Servlet Mapping-->
@@ -115,6 +120,10 @@
     <servlet-mapping>
         <servlet-name>viewCartServlet</servlet-name>
         <url-pattern>/viewCartServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editProductServlet</servlet-name>
+        <url-pattern>/editProductServlet</url-pattern>
     </servlet-mapping>
     
     <session-config>
