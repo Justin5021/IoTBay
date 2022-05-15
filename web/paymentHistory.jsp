@@ -72,7 +72,6 @@ ResultSet resultSet = null;
                             <th scope="col">Payment ID</th>
                             <th scope="col">Payment Total</th>
                             <th scope="col">Payment Info ID</th>
-                            <th scope="col">Delete info</th>
                         </tr>
                         </thead>
                     <%
@@ -89,7 +88,6 @@ ResultSet resultSet = null;
                         <td><%=resultSet.getString("PaymentID")%></td>
                         <td><%=resultSet.getString("PaymentTotal")%></td>
                         <td><%=resultSet.getString("PaymentInfoID")%></td>
-                        <td> <input type="checkbox" name="PAYMENTID" value="${PaymentInfo.getPaymentInfoID}"></td>
                     </tr>
                     <%
                         }
