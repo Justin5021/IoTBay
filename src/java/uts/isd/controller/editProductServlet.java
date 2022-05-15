@@ -42,7 +42,16 @@ public class editProductServlet extends HttpServlet {
         int supplierID = Integer.parseInt(request.getParameter("supplierID"));
         
         try {
-          productManager.updateProduct(productID, productSerialNum, productQuantity, supplierID, productPrice, productName, productCategory, productBrand, productImageURL);
+          productManager.updateProduct(productID, productSerialNum, productName, productCategory, productBrand, productPrice, productQuantity, productImageURL, supplierID);
+          System.out.println(productID);
+          System.out.println(productSerialNum);
+          System.out.println(productName);
+          System.out.println(productCategory);
+          System.out.println(productBrand);
+          System.out.println(productPrice);
+          System.out.println(productQuantity);
+          System.out.println(productImageURL);
+          System.out.println(supplierID);
           System.out.println("Product Updated");
         } 
         catch (SQLException | NullPointerException ex) {

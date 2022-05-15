@@ -153,16 +153,17 @@ public class ProductDBManager {
     }
 
     // Update - Update a single product
-    public void updateProduct(int productID, int serialNum, int quantity, int supplierID, float price, String name, String category, String brand, String image ) throws SQLException {
+    public void updateProduct(int productID, int serialNum, String name, String category, String brand, float price, int quantity, String image, int supplierID) throws SQLException {
         String query = 
-                "UPDATE IOTBAY.PRODUCT SET " +
+                "UPDATE IOTBAY.PRODUCT SET" +
                 " PRODUCTSERIALNUM= " + serialNum + ", " +
-                " SUPPLIERID = '" + supplierID + "', " +
-                " PRODUCTPRICE= '" + price + "', " +
-                " PRODUCTNAME= " + name + " " +
-                " PRODUCTCATEGORY= " + category + " " +
-                " PRODUCTBRAND= " + brand + " " +
-                " PRODUCTIMAGEURL= " + image + " " +
+                " PRODUCTNAME= " + "'" + name + "'" + ", " +
+                " PRODUCTCATEGORY= " + "'" + category + "'" + ", " +
+                " PRODUCTBRAND= " + "'" + brand + "'" + ", " +
+                " PRODUCTPRICE= " + price + ", " +
+                " PRODUCTQUANTITY= " + quantity + ", " +
+                " PRODUCTIMAGEURL= " + "'" + image + "'" + ", " +
+                " SUPPLIERID = " + supplierID + " " +
                 "WHERE PRODUCTID = " + productID;
         
         st.execute(query);
