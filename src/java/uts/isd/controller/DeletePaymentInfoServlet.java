@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import uts.isd.model.PaymentInfo;
+import uts.isd.model.User;
 import uts.isd.model.dao.PaymentInfoDBManager;
 
 /**
@@ -28,6 +29,7 @@ public class DeletePaymentInfoServlet extends HttpServlet {
 
     HttpSession session;
     PaymentInfoDBManager paymentIDManager;
+    User user;
     
 @Override   
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

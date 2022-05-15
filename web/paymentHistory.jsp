@@ -108,7 +108,7 @@ ResultSet resultSet = null;
                     <a/>
             </div>
                 
-            <form action="DeletePaymentInfoServlet">
+            <form action="DeletePaymentInfoServlet" >
                 <p class="display-6">Delete Payment Info</p>
                 <Label>Payment Info ID:</label>
                 <input type="number" name="PaymentInfoID" placeholder="Enter Info ID">
